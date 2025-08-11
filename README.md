@@ -1,6 +1,10 @@
 # Overview
 
+<<<<<<< HEAD
  web application for GCMS (Government Commerce & Management Sciences College) built with modern web technologies. The application serves as the institution's official website, showcasing academic programs, faculty information, student achievements, sports activities, and college gallery. It features a professional, responsive design with a carousel-based hero section, interactive components, and comprehensive institutional information.
+=======
+The application serves as the institution's official website, showcasing academic programs, faculty information, student achievements, sports activities, and college gallery. It features a professional, responsive design with a carousel-based hero section, interactive components, and comprehensive institutional information.
+>>>>>>> bf034e1cc0374475d9eca9f9a479f5b8ae118f29
 
 # User Preferences
 
