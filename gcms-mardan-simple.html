@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCMS Mardan - Government Commerce & Management Sciences College</title>
+    <meta name="description" content="GCMS Mardan - Premier educational institution offering business administration, commerce, and IT programs.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        .news-ticker {
+            background: #2563eb;
+            color: white;
+            padding: 10px 0;
+            overflow: hidden;
+        }
+        
+        .ticker-content {
+            display: flex;
+            white-space: nowrap;
+            animation: scroll 30s linear infinite;
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-circle {
+            width: 60px;
+            height: 60px;
+            background: #2563eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .logo-text h1 {
+            font-size: 24px;
+            color: #1f2937;
+        }
+        
+        .logo-text p {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #fbbf24;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #f59e0b;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #1f2937;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 60px;
+        }
+        
+        /* Principal Section */
+        .principal {
+            background: white;
+        }
+        
+        .principal-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .principal-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .principal-info h3 {
+            font-size: 24px;
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+        
+        .principal-info .position {
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+        
+        .principal-message {
+            color: #4b5563;
+            line-height: 1.8;
+        }
+        
+        .principal-message p {
+            margin-bottom: 20px;
+        }
+        
+        /* Faculty Section */
+        .faculty {
+            background: #f9fafb;
+        }
+        
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .faculty-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .faculty-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .faculty-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .faculty-info {
+            padding: 30px;
+        }
+        
+        .faculty-info h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .faculty-info .position {
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .faculty-info .qualification {
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+        
+        /* Stars Section */
+        .stars {
+            background: white;
+        }
+        
+        .stars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .star-card {
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 12px;
+            color: white;
+        }
+        
+        .star-card.gold {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+        }
+        
+        .star-card.silver {
+            background: linear-gradient(135deg, #9ca3af, #6b7280);
+        }
+        
+        .star-card.bronze {
+            background: linear-gradient(135deg, #d97706, #b45309);
+        }
+        
+        .star-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid white;
+        }
+        
+        .star-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        /* Statistics Section */
+        .stats {
+            background: #2563eb;
+            color: white;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        /* Programs Section */
+        .programs {
+            background: white;
+        }
+        
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .program-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 30px;
+            transition: border-color 0.3s;
+        }
+        
+        .program-card:hover {
+            border-color: #2563eb;
+        }
+        
+        .program-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .program-code {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+        
+        .program-duration {
+            background: #e0f2fe;
+            color: #2563eb;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .program-description {
+            color: #6b7280;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .program-btn {
+            width: 100%;
+            padding: 15px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .program-btn:hover {
+            background: #1d4ed8;
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            background: #f9fafb;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .gallery-item {
+            text-align: center;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item h4 {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1f2937;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo-circle {
+            width: 50px;
+            height: 50px;
+            background: #2563eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .footer-description {
+            color: #d1d5db;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: #2563eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: #1d4ed8;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 30px;
+            text-align: center;
+            color: #9ca3af;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h2 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .principal-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- News Ticker -->
+    <div class="news-ticker">
+        <div class="ticker-content">
+            <span><i class="fas fa-bullhorn"></i> D.Com / DBA and TSC Annual 2025 Examination Result Will be declared on 30-07-2025 at 4:00 PM &nbsp;&nbsp;&nbsp;</span>
+            <span><i class="fas fa-laptop"></i> Student portal - We launch our student portal in our online system &nbsp;&nbsp;&nbsp;</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <div class="logo-circle">GCMS</div>
+                    <div class="logo-text">
+                        <h1>GCMS Mardan</h1>
+                        <p>Government Commerce & Management Sciences</p>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#faculty">Faculty</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Result Announcement</h2>
+            <p>D.Com / DBA and TSC Annual 2025 Examination Result Will be declared on 30-07-2025 at 4:00 PM</p>
+            <a href="#" class="btn">Check Results</a>
+        </div>
+    </section>
+
+    <!-- Principal Message -->
+    <section id="about" class="section principal">
+        <div class="container">
+            <div class="principal-content">
+                <div class="principal-image">
+                    <img src="https://www.gcmsmardan.edu.pk/uploads/principal/67ea6db8725b5.jpg" alt="Ali Bahadar - Principal GCMS Mardan">
+                </div>
+                <div class="principal-info">
+                    <h2 class="section-title">Principal's Message</h2>
+                    <h3>Ali Bahadar</h3>
+                    <p class="position">Principal, GCMS MARDAN</p>
+                    <div class="principal-message">
+                        <p>Welcome to GCMS MARDAN, a thriving community of learners where curiosity, creativity and academic excellence flourish. Our mission is to empower students to become lifelong learners, critical thinkers and compassionate leaders, equipped to succeed in a rapidly changing world and make a profound impact on society.</p>
+                        <p>We nurture the intellectual, emotional and social growth of our students, instilling values of integrity, resilience, empathy and responsibility. Our goal is to cultivate compassionate and courageous individuals who are prepared to make a meaningful difference in the world.</p>
+                        <p><strong>To our students, I extend my warmest welcome and best wishes for an extraordinary academic journey. May your time at GCMS MARDAN be filled with discovery, growth and success. Amen!</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section id="faculty" class="section faculty">
+        <div class="container">
+            <h2 class="section-title">Our Distinguished Faculty</h2>
+            <p class="section-subtitle">Meet our experienced and dedicated educators</p>
+            <div class="faculty-grid">
+                <div class="faculty-card">
+                    <img src="https://www.gcmsmardan.edu.pk/uploads/faculty/683e82f253ff1.jpg" alt="Fawad Ali Azeemi">
+                    <div class="faculty-info">
+                        <h3>Fawad Ali Azeemi</h3>
+                        <p class="position">Associate Professor</p>
+                        <p class="qualification">M.A in English Literature</p>
+                        <a href="#" style="color: #2563eb; text-decoration: none;">View Profile <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="faculty-card">
+                    <img src="https://www.gcmsmardan.edu.pk/uploads/faculty/683811458edd9.jpeg" alt="Abdul Kabir">
+                    <div class="faculty-info">
+                        <h3>Abdul Kabir</h3>
+                        <p class="position">Assistant Professor</p>
+                        <p class="qualification">M.Com</p>
+                        <a href="#" style="color: #2563eb; text-decoration: none;">View Profile <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="faculty-card">
+                    <img src="https://www.gcmsmardan.edu.pk/uploads/faculty/683750d9dea3e.jpg" alt="Najeeb Ullah">
+                    <div class="faculty-info">
+                        <h3>Najeeb Ullah</h3>
+                        <p class="position">Lecturer</p>
+                        <p class="qualification">MS Management Sciences</p>
+                        <a href="#" style="color: #2563eb; text-decoration: none;">View Profile <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <a href="#" class="btn">View All Faculty</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shining Stars -->
+    <section class="section stars">
+        <div class="container">
+            <h2 class="section-title">Shining Stars</h2>
+            <p class="section-subtitle">Celebrating our top achievers</p>
+            <div class="stars-grid">
+                <div class="star-card gold">
+                    <img src="https://www.gcmsmardan.edu.pk/uploads/stars/1743160667.jpg" alt="Shah Fahad">
+                    <h3>Shah Fahad</h3>
+                    <p>First Position in KPBT&CE Peshawar</p>
+                    <i class="fas fa-trophy" style="font-size: 24px; margin-top: 15px;"></i>
+                </div>
+                <div class="star-card silver">
+                    <img src="https://www.gcmsmardan.edu.pk/uploads/stars/1743160703.jpg" alt="Imran Ullah">
+                    <h3>Imran Ullah</h3>
+                    <p>Second Position In KPBT&CE Peshawar</p>
+                    <i class="fas fa-medal" style="font-size: 24px; margin-top: 15px;"></i>
+                </div>
+                <div class="star-card bronze">
+                    <img src="https://www.gcmsmardan.edu.pk/uploads/stars/1743160740.jpg" alt="Nouman">
+                    <h3>Nouman</h3>
+                    <p>Third Position In KPBT&CE Peshawar</p>
+                    <i class="fas fa-award" style="font-size: 24px; margin-top: 15px;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="section stats">
+        <div class="container">
+            <h2 class="section-title">Our Achievement Numbers</h2>
+            <p class="section-subtitle">Growing stronger with each passing year</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Students Enrolled</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-label">Library Books</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Expert Faculty</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Programs -->
+    <section id="programs" class="section programs">
+        <div class="container">
+            <h2 class="section-title">Academic Programs</h2>
+            <p class="section-subtitle">Explore our diverse range of academic programs</p>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-code">DBA</div>
+                        <div class="program-duration">2 Years</div>
+                    </div>
+                    <p class="program-description">Diploma in Business Administration - Comprehensive business education focusing on management and entrepreneurship.</p>
+                    <button class="program-btn">Learn More</button>
+                </div>
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-code">BBA</div>
+                        <div class="program-duration">4 Years</div>
+                    </div>
+                    <p class="program-description">Bachelor of Business Administration - Advanced business studies with specializations in various domains.</p>
+                    <button class="program-btn">Learn More</button>
+                </div>
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-code">D.Com</div>
+                        <div class="program-duration">2 Years</div>
+                    </div>
+                    <p class="program-description">Diploma in Commerce - Foundation in commercial practices and accounting principles.</p>
+                    <button class="program-btn">Learn More</button>
+                </div>
+                <div class="program-card">
+                    <div class="program-header">
+                        <div class="program-code">DIT</div>
+                        <div class="program-duration">1 Year</div>
+                    </div>
+                    <p class="program-description">Diploma in Information Technology - Practical IT skills and computer applications training.</p>
+                    <button class="program-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery Highlights</h2>
+            <p class="section-subtitle">Recent moments from our institution</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://www.gcmsmardan.edu.pk/uploads/gallery/6852790f58de4.jpeg" alt="Annual Prize Distribution Ceremony">
+                    <h4>Annual Prize Distribution Ceremony</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://www.gcmsmardan.edu.pk/uploads/gallery/685278d95e246.jpeg" alt="Annual Prize Distribution Ceremony">
+                    <h4>Annual Prize Distribution Ceremony</h4>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://www.gcmsmardan.edu.pk/uploads/gallery/685277643d9c4.jpg" alt="Annual Prize Distribution Ceremony">
+                    <h4>Annual Prize Distribution Ceremony</h4>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <a href="#" class="btn">View Full Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">
+                        <div class="footer-logo-circle">GCMS</div>
+                        <div>
+                            <h3>GCMS Mardan</h3>
+                            <p style="color: #9ca3af; font-size: 14px;">Government Commerce & Management Sciences</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Empowering students to become lifelong learners, critical thinkers and compassionate leaders for a better tomorrow.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#faculty">Faculty</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div style="color: #d1d5db;">
+                        <p><i class="fas fa-map-marker-alt" style="color: #2563eb; margin-right: 10px;"></i>Mardan, Khyber Pakhtunkhwa, Pakistan</p>
+                        <p><i class="fas fa-phone" style="color: #2563eb; margin-right: 10px;"></i>+92-XXX-XXXXXXX</p>
+                        <p><i class="fas fa-envelope" style="color: #2563eb; margin-right: 10px;"></i>info@gcmsmardan.edu.pk</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GCMS Mardan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
