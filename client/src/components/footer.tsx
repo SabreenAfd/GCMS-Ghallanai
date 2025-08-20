@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import AptechmediaLogo from "@/assets/logos/apptechmedia.png";
+import GcmsLogo from "@/assets/logos/gcms-logo.png";
 
 export default function Footer() {
   return (
@@ -9,9 +10,7 @@ export default function Footer() {
           {/* Institution Info */}
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center space-x-4 mb-6">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">GCMS</span>
-              </div>
+              
               <div>
                 <h3 className="text-xl font-bold" data-testid="text-footer-title">GCMS Ghallanai</h3>
                 <p className="text-gray-400 text-sm" data-testid="text-footer-subtitle">Government Commerce & Management Sciences</p>
