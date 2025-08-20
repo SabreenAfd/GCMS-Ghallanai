@@ -1,8 +1,9 @@
 import { Link } from "wouter";
+import AptechmediaLogo from "@/assets/logos/apptechmedia.png";
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-gray-800 text-white py-16">
+    <footer id="contact" className="bg-gray-800 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Institution Info */}
@@ -119,9 +120,23 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-12 pt-8 text-center">
-          <p className="text-gray-400" data-testid="text-footer-copyright">&copy; 2025 GCMS Ghallanai. All rights reserved.</p>
-        </div>
+        <div className="border-t border-gray-700 mt-10 pt-6 flex items-center justify-between">
+      {/* Left Side */}
+      <p className="text-gray-400 text-sm" data-testid="text-footer-copyright">
+        &copy; 2025 GCMS Ghallanai. All rights reserved.
+      </p>
+
+      {/* Right Side */}
+      <div className="flex items-center space-x-2">
+        <span className="text-gray-400 text-sm">Powered by: <strong>Aptechmedia</strong></span>
+        <img 
+          src={AptechmediaLogo} 
+          alt="Aptechmedia Logo" 
+          className="h-8 w-8 rounded-full object-cover"
+        />
+      </div>
+    </div>
+
       </div>
     </footer>
   );

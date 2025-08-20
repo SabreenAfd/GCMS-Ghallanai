@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -53,31 +54,23 @@ export default function SportsSection() {
                 <p className="text-gray-600 mb-4" data-testid={`text-sport-description-${index}`}>
                   {sport.description}
                 </p>
-                <a 
-                  href="" 
-                  className="inline-flex items-center text-primary hover:text-secondary font-medium"
-                  data-testid={`link-sport-learn-more-${index}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Learn More <i className="fas fa-arrow-right ml-2"></i>
-                </a>
+                <Link href="/sports">
+                  <span className="inline-flex items-center text-primary hover:text-secondary font-medium cursor-pointer" data-testid={`link-sport-learn-more-${index}`}>
+                    Learn More <i className="fas fa-arrow-right ml-2"></i>
+                  </span>
+                </Link>
               </CardContent>
             </Card>
           ))}
         </div>
 
         <div className="text-center">
-          <a 
-            href="" 
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="/sports">
             <Button className="bg-primary hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold" data-testid="button-view-all-sports">
               <i className="fas fa-running mr-2"></i>
               View All Sports
             </Button>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

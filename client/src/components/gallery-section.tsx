@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
@@ -56,16 +57,12 @@ export default function GallerySection() {
         </div>
 
         <div className="text-center">
-          <a 
-            href="" 
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="/gallery">
             <Button className="bg-primary hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold" data-testid="button-view-full-gallery">
               <i className="fas fa-images mr-2"></i>
               View Full Gallery
             </Button>
-          </a>
+          </Link>
         </div>
 
         {/* Lightbox Dialog */}

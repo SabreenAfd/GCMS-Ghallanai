@@ -1,5 +1,3 @@
-// lib/faculty-data.ts
-
 export interface FacultyMember {
   id: number;
   name: string;

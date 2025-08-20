@@ -7,6 +7,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import About from "@/pages/about";
 import Faculty from "@/pages/faculty";
+import FacultyProfile from "@/pages/faculty-profile"; 
 import Programs from "@/pages/programs";
 import Sports from "@/pages/sports";
 import Gallery from "@/pages/gallery";
@@ -18,6 +19,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/faculty" component={Faculty} />
+      <Route path="/faculty/:slug" component={FacultyProfile} />
       <Route path="/programs" component={Programs} />
       <Route path="/sports" component={Sports} />
       <Route path="/gallery" component={Gallery} />
