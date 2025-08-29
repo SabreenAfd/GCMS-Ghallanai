@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Institution Info */}
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center space-x-4 mb-6">
-              
+             
               <div>
                 <h3 className="text-xl font-bold" data-testid="text-footer-title">GCMS Ghallanai</h3>
                 <p className="text-gray-400 text-sm" data-testid="text-footer-subtitle">Government Commerce & Management Sciences</p>
