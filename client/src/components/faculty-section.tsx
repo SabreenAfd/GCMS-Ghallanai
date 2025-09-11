@@ -104,7 +104,7 @@ export default function FacultySection() {
                     className="text-gray-700 font-medium text-sm" 
                     data-testid={`text-faculty-qualification-${member.id}`}
                   >
-                    🎓 {member.qualification}
+                     {member.qualification}
                   </p>
                 </div>
 

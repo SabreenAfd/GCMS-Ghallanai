@@ -24,19 +24,24 @@ export default function Header() {
     <header className="bg-white shadow-sm sticky top-0 z-50">
       {/* Top Flash Bar */}
       <div className="bg-primary text-white py-2 overflow-hidden text-sm">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center space-x-10 animate-marquee whitespace-nowrap">
-            <span className="flex items-center">
-              <i className="fas fa-bullhorn mr-2"></i>
-              D.Com / DBA and TSC Annual 2025 Exam Result will be declared on 30-07-2025 at 4:00 PM
-            </span>
-            <span className="flex items-center">
-              <i className="fas fa-laptop mr-2"></i>
-              Student portal launched in our online system
-            </span>
-          </div>
-        </div>
-      </div>
+  <div className="container mx-auto px-4">
+    <div className="flex items-center space-x-10 animate-marquee whitespace-nowrap">
+      <span className="flex items-center">
+        <i className="fas fa-bullhorn mr-2"></i>
+        Admissions open! GCMS Ghallanai offering BS Commerce, BS Computer Science, D.Com & FSc – Apply now.
+      </span>
+      <span className="flex items-center">
+        <i className="fas fa-laptop mr-2"></i>
+        FSc Computer Science Annual Examination-2025 in progress at GCMS Ghallanai.
+      </span>
+      <span className="flex items-center">
+        <i className="fas fa-phone mr-2"></i>
+        Contact: 0924-290310 | Email: gcmsghallanai@gmail.com
+      </span>
+    </div>
+  </div>
+</div>
+
 
       {/* Main Navbar */}
       <nav className="border-b border-gray-200">

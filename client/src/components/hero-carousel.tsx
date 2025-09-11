@@ -3,31 +3,33 @@ import { Button } from "@/components/ui/button";
 import hero1 from "@/assets/hero1.jpg";
 import hero2 from "@/assets/hero2.jpg";
 import hero3 from "@/assets/hero3.jpg";
-import poster from "@/assets/Academic Programs.jpeg"; // Admission poster
+import poster from "@/assets/Academic Programs.jpeg"; 
 
 const slides = [
   {
     id: 0,
-    title: "Result Announcement",
+    title: "Admissions Open",
     description:
-      "D.Com / DBA and TSC Annual 2025 Examination Result Will be declared on 30-07-2025 at 4:00 PM",
+      "Apply now for BS Commerce, BS Computer Science, D.Com, DBA, and FSc programs at GCMS Ghallanai. Limited seats available!",
     image: hero1,
-    buttonText: "Check Results",
+    buttonText: "Learn More",
     buttonStyle: "bg-accent hover:bg-yellow-500 text-white",
   },
   {
     id: 1,
-    title: "Our Aim",
-    description: "GCMS Ghallanai: Business Education Excellence",
+    title: "About Us",
+    description:
+      "Government College of Management Sciences (GCMS) Ghallanai, Mohmand District, KPK – A hub of excellence in business and computer education.",
     image: hero2,
     buttonText: "Learn More",
     buttonStyle: "bg-white text-green-700 hover:bg-gray-100",
   },
   {
     id: 2,
-    title: "Top Position Holder",
+    title: "Our Achievements",
     description:
-      "GCMS Mardan Once Again Secure first three position in KPBTE Peshawar",
+      "GCMS Ghallanai continues to secure top positions in KPBTE exams and is recognized for academic excellence in the region.",
+   
     image: hero3,
     buttonText: "View Achievements",
     buttonStyle: "bg-white text-yellow-700 hover:bg-gray-100",
@@ -45,7 +47,7 @@ export default function HeroCarousel() {
   }, []);
 
   return (
-    <div className="relative w-full h-[650px] overflow-hidden">
+    <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[750px] xl:h-[850px] overflow-hidden">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -64,21 +66,25 @@ export default function HeroCarousel() {
           {/* Dark Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-          {/* Content + Poster Layout */}
-          <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-center text-center md:text-left px-6 gap-8">
-            {/* Centered Text */}
-            <div className="flex-1 text-white">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+          {/* Content + Poster */}
+          <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-center md:justify-between text-center md:text-left px-6 md:px-12 gap-6 md:gap-10">
+            {/* Text */}
+            <div className="flex-1 text-white max-w-xl">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">
                 {slide.title}
               </h2>
-              <p className="text-lg md:text-xl mb-6 max-w-xl drop-shadow-md">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 drop-shadow-md">
                 {slide.description}
               </p>
-              <Button className={slide.buttonStyle}>{slide.buttonText}</Button>
+              <Button
+                className={`${slide.buttonStyle} px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base`}
+              >
+                {slide.buttonText}
+              </Button>
             </div>
 
-            {/* Poster on the Right */}
-            <div className="w-72 md:w-80 lg:w-[420px] flex-shrink-0">
+            {/* Poster (hidden on very small screens) */}
+            <div className="hidden sm:block w-52 md:w-72 lg:w-[420px] flex-shrink-0">
               <img
                 src={poster}
                 alt="Admission Poster"
@@ -86,24 +92,35 @@ export default function HeroCarousel() {
               />
             </div>
           </div>
+
+          {/* Poster Below Text (for mobile only) */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 block sm:hidden w-40">
+            <img
+              src={poster}
+              alt="Admission Poster"
+              className="w-full h-auto rounded-xl shadow-lg border-2 border-white"
+            />
+          </div>
         </div>
       ))}
 
       {/* Carousel Indicators */}
-      <div className="absolute bottom-6 w-full flex justify-center gap-3 z-30">
+      <div className="absolute bottom-4 sm:bottom-6 w-full flex justify-center gap-2 sm:gap-3 z-30">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-opacity ${
-              index === currentSlide ? "bg-white opacity-100" : "bg-white opacity-50"
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-opacity ${
+              index === currentSlide
+                ? "bg-white opacity-100"
+                : "bg-white opacity-50"
             } hover:opacity-100`}
-            data-testid={`carousel-indicator-${index}`}
           />
         ))}
       </div>
     </div>
   );
 }
+
 
 
