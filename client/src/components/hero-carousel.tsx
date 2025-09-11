@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import hero1 from "@/assets/hero1.jpg";
 import hero2 from "@/assets/hero2.jpg";
 import hero3 from "@/assets/hero3.jpg";
+import poster from "@/assets/Academic Programs.jpeg"; // Admission poster
 
 const slides = [
   {
@@ -44,63 +45,65 @@ export default function HeroCarousel() {
   }, []);
 
   return (
-    <section id="home" className="relative w-full">
-      <div className="hero-carousel relative">
-        {slides.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={`relative w-full h-screen ${
-              index === currentSlide ? "block" : "hidden"
-            }`}
-          >
-            {/* Full background image */}
-            <img
-              src={slide.image}
-              alt={slide.title}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
+    <div className="relative w-full h-[650px] overflow-hidden">
+      {/* Slides */}
+      {slides.map((slide, index) => (
+        <div
+          key={slide.id}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            index === currentSlide ? "opacity-100 z-20" : "opacity-0 z-10"
+          }`}
+        >
+          {/* Background Image */}
+          <img
+            src={slide.image}
+            alt={slide.title}
+            className="w-full h-full object-cover"
+          />
 
-            {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black/50" />
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-            {/* Content center */}
-            <div className="relative z-10 flex flex-col items-center justify-center text-center text-white h-full px-4">
-              <h2
-                className="text-4xl md:text-6xl font-bold mb-6"
-                data-testid={`carousel-title-${slide.id}`}
-              >
+          {/* Content + Poster Layout */}
+          <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-center text-center md:text-left px-6 gap-8">
+            {/* Centered Text */}
+            <div className="flex-1 text-white">
+              <h2 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg">
                 {slide.title}
               </h2>
-              <p
-                className="text-lg md:text-2xl mb-8 max-w-2xl"
-                data-testid={`carousel-description-${slide.id}`}
-              >
+              <p className="text-lg md:text-xl mb-6 max-w-xl drop-shadow-md">
                 {slide.description}
               </p>
-              <Button
-                className={`${slide.buttonStyle} px-8 py-3 rounded-lg font-semibold transition-colors`}
-                data-testid={`carousel-button-${slide.id}`}
-              >
-                {slide.buttonText}
-              </Button>
+              <Button className={slide.buttonStyle}>{slide.buttonText}</Button>
+            </div>
+
+            {/* Poster on the Right */}
+            <div className="w-72 md:w-80 lg:w-[420px] flex-shrink-0">
+              <img
+                src={poster}
+                alt="Admission Poster"
+                className="w-full h-auto rounded-2xl shadow-2xl border-4 border-white"
+              />
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
 
-      {/* Carousel Controls */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+      {/* Carousel Indicators */}
+      <div className="absolute bottom-6 w-full flex justify-center gap-3 z-30">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 bg-white rounded-full transition-opacity ${
-              index === currentSlide ? "opacity-100" : "opacity-50"
+            className={`w-3 h-3 rounded-full transition-opacity ${
+              index === currentSlide ? "bg-white opacity-100" : "bg-white opacity-50"
             } hover:opacity-100`}
             data-testid={`carousel-indicator-${index}`}
           />
         ))}
       </div>
-    </section>
+    </div>
   );
 }
+
+

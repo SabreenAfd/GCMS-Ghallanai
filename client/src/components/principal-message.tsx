@@ -51,30 +51,17 @@ export default function PrincipalMessage() {
                 data-testid="text-principal-message"
               >
                 <p className="text-base">
-                  Welcome to GCMS Ghallanai, a thriving community of learners where curiosity, 
-                  creativity, and academic excellence flourish. Our mission is to empower students 
-                  to become lifelong learners, critical thinkers, and compassionate leaders, equipped 
-                  to succeed in a rapidly changing world and make a profound impact on society.
+                  Welcome to GCMS Ghallanai, District Mohmand, a center of learning where curiosity, innovation, and excellence thrive. We are committed to developing skilled professionals, critical thinkers, and responsible leaders who are equipped to meet modern challenges and contribute positively to society.
+
                 </p>
                 
                 <p className="text-base">
-                  We nurture the intellectual, emotional, and social growth of our students, instilling 
-                  values of integrity, resilience, empathy, and responsibility. Our goal is to cultivate 
-                  compassionate and courageous individuals who are prepared to make a meaningful difference 
-                  in the world.
+                 At GCMS Ghallanai, we believe in providing a holistic education that goes beyond textbooks and examinations. With our dedicated faculty, state-of-the-art facilities, and comprehensive curriculum, we ensure that every student receives a strong foundation for their future endeavors.
                 </p>
-                
-                <p className="text-base">
-                  At GCMS Ghallanai, we believe in providing a holistic education that goes beyond textbooks 
-                  and examinations. Our dedicated faculty, state-of-the-art facilities, and comprehensive 
-                  curriculum ensure that every student receives the best possible foundation for their future 
-                  endeavors.
-                </p>
+               
                 
                 <p className="text-base font-medium text-blue-700 italic">
-                  To our students, I extend my warmest welcome and best wishes for an extraordinary academic 
-                  journey. May your time at GCMS Ghallanai be filled with discovery, growth, and success. 
-                  Together, we will build a brighter future through education and excellence. Amen!
+                  I warmly welcome all students and wish you a rewarding journey filled with discovery, growth, and success. Together, we will build a brighter future through education and excellence. Amen!
                 </p>
               </div>
             </div>

@@ -21,14 +21,14 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://www.facebook.com/gcmsghallanai/" 
                 className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
                 data-testid="link-social-facebook"
               >
                 <i className="fab fa-facebook-f"></i>
               </a>
               <a 
-                href="#" 
+                href="" 
                 className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
                 data-testid="link-social-twitter"
               >
@@ -109,11 +109,13 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <i className="fas fa-phone text-primary"></i>
-                <p className="text-gray-300" data-testid="text-contact-phone">+92-XXX-XXXXXXX</p>
-              </div>
+                <p className="text-gray-300" data-testid="text-contact-phone">0924-290310</p>
+                <p className="text-gray-300" data-testid="text-contact-phone">0305-9280626</p>
+                
+                 </div>
               <div className="flex items-center space-x-3">
                 <i className="fas fa-envelope text-primary"></i>
-                <p className="text-gray-300" data-testid="text-contact-email">info@gcmsghallanai.edu.pk</p>
+                <p className="text-gray-300" data-testid="text-contact-email">gcmsghallanai@gmail.com</p>
               </div>
             </div>
           </div>

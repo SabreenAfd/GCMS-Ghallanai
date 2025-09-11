@@ -4,107 +4,138 @@ import { Badge } from "@/components/ui/badge";
 
 const programs = [
   {
-    code: "DBA",
+    code: "FSc CS",
     duration: "2 Years",
-    title: "Diploma in Business Administration",
-    description: "Comprehensive business education focusing on management and entrepreneurship.",
-    available: true
-  },
-  {
-    code: "BBA",
-    duration: "4 Years",
-    title: "Bachelor of Business Administration",
-    description: "Advanced business studies with specializations in various domains.",
-    available: true
+    title: "Faculty of Science in Computer Science",
+    description: "Foundation in computer science with emphasis on programming fundamentals and mathematics.",
+    available: true,
+    featured: false
   },
   {
     code: "D.Com",
-    duration: "2 Years",
+    duration: "2 Years", 
     title: "Diploma in Commerce",
-    description: "Foundation in commercial practices and accounting principles.",
-    available: true
+    description: "Comprehensive commercial education covering accounting, business studies, and economics.",
+    available: true,
+    featured: false
   },
   {
     code: "DIT",
     duration: "1 Year",
     title: "Diploma in Information Technology",
-    description: "Practical IT skills and computer applications training.",
-    available: true
+    description: "Practical IT skills training including computer applications and basic programming.",
+    available: true,
+    featured: true
   },
   {
-    code: "BS Computer Science",
+    code: "BS CS",
     duration: "4 Years",
     title: "Bachelor of Science in Computer Science",
-    description: "Advanced computing, programming, and software development.",
-    available: false
+    description: "Advanced computing degree with software development, algorithms, and system design.",
+    available: true,
+    featured: true
   },
   {
     code: "BS Commerce",
     duration: "4 Years",
     title: "Bachelor of Science in Commerce",
-    description: "Advanced studies in commerce, finance, and business management.",
-    available: false
+    description: "Advanced business and commerce education with specializations in finance and management.",
+    available: true,
+    featured: false
   }
 ];
 
 export default function AcademicPrograms() {
   return (
-    <section id="programs" className="py-16 bg-white">
+    <section id="programs" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-testid="text-programs-title">
+        {/* Section Title */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6" data-testid="text-programs-title">
             Academic Programs
           </h2>
-          <p className="text-gray-600 text-lg" data-testid="text-programs-subtitle">
-            Explore our diverse range of academic programs
+          <p className="text-slate-600 text-xl max-w-2xl mx-auto leading-relaxed" data-testid="text-programs-subtitle">
+            Discover excellence in education with our comprehensive range of programs designed for future leaders
           </p>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mt-6"></div>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {/* Cards Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {programs.map((program, index) => (
             <Card 
               key={index} 
-              className={`border rounded-xl p-6 hover:shadow-lg transition-shadow relative ${
-                program.available ? 'bg-white border-gray-200' : 'bg-gray-50 border-gray-200'
-              }`}
+              className={`group relative border-0 rounded-2xl p-8 h-full flex flex-col hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2
+                ${program.available 
+                  ? program.featured 
+                    ? 'bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-xl' 
+                    : 'bg-white shadow-md border border-slate-200 hover:border-blue-300'
+                  : 'bg-slate-100 border border-slate-200'
+                }`}
               data-testid={`card-program-${index}`}
             >
+              {/* Coming Soon Badge */}
               {!program.available && (
-                <Badge className="absolute top-4 right-4 bg-accent text-white" data-testid={`badge-program-coming-soon-${index}`}>
+                <Badge className="absolute top-4 right-4 bg-slate-500 text-white" data-testid={`badge-program-coming-soon-${index}`}>
                   Coming Soon
                 </Badge>
               )}
-              <CardContent className="p-0">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className={`text-2xl font-bold ${program.available ? 'text-primary' : 'text-gray-600'}`} data-testid={`text-program-code-${index}`}>
-                    {program.code}
-                  </h3>
-                  <Badge 
-                    variant="secondary" 
-                    className={`${program.available ? 'bg-blue-100 text-primary' : 'bg-gray-200 text-gray-600'}`}
-                    data-testid={`badge-program-duration-${index}`}
-                  >
-                    {program.duration}
-                  </Badge>
+              
+              {/* Card Content */}
+              <CardContent className="p-0 flex-1 flex flex-col">
+                <div className="flex-1">
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="flex-1">
+                      <h3 className={`text-2xl font-bold mb-2 ${
+                        program.featured ? 'text-white' : 'text-slate-800'
+                      }`} data-testid={`text-program-code-${index}`}>
+                        {program.code}
+                      </h3>
+                      <h4 className={`text-sm font-medium mb-4 ${
+                        program.featured ? 'text-blue-100' : 'text-slate-600'
+                      }`}>
+                        {program.title}
+                      </h4>
+                    </div>
+                    <Badge 
+                      variant="secondary" 
+                      className={`ml-4 ${
+                        program.featured
+                          ? 'bg-white/20 text-white border-white/30'
+                          : 'bg-blue-50 text-blue-700 border-blue-200'
+                      }`}
+                      data-testid={`badge-program-duration-${index}`}
+                    >
+                      {program.duration}
+                    </Badge>
+                  </div>
+                  <p className={`mb-6 leading-relaxed ${
+                    program.featured ? 'text-blue-50' : 'text-slate-600'
+                  }`} data-testid={`text-program-description-${index}`}>
+                    {program.description}
+                  </p>
                 </div>
-                <p className={`mb-6 ${program.available ? 'text-gray-600' : 'text-gray-500'}`} data-testid={`text-program-description-${index}`}>
-                  {program.description}
-                </p>
+
+                {/* Button at bottom */}
                 <Button 
-                  className={`w-full py-3 rounded-lg font-semibold transition-colors ${
-                    program.available 
-                      ? 'bg-primary hover:bg-blue-700 text-white' 
-                      : 'bg-gray-400 text-white cursor-not-allowed'
-                  }`}
+                  className={`w-full py-4 rounded-xl font-semibold text-base transition-all duration-300 mt-auto
+                    ${program.available 
+                      ? program.featured 
+                        ? 'bg-white text-blue-700 hover:bg-blue-50 shadow-lg hover:shadow-xl' 
+                        : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl'
+                      : 'bg-slate-400 text-white cursor-not-allowed'
+                    }`}
                   disabled={!program.available}
                   data-testid={`button-program-learn-more-${index}`}
                 >
-                  Learn More
+                  {program.available ? 'Learn More & Apply' : 'Coming Soon'}
                 </Button>
               </CardContent>
             </Card>
           ))}
         </div>
+        
+      
       </div>
     </section>
   );
