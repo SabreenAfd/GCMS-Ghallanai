@@ -65,14 +65,14 @@ export default function Contact() {
                 <i className="fas fa-phone text-white text-2xl"></i>
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Phone Number</h3>
-              <p className="text-gray-600">+92-XXX-XXXXXXX</p>
+              <p className="text-gray-600">0305-9280626</p>
             </div>
             <div className="text-center slide-up delay-600">
               <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i className="fas fa-envelope text-white text-2xl"></i>
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Email Address</h3>
-              <p className="text-gray-600">info@gcmsghallanai.edu.pk</p>
+              <p className="text-gray-600">gcmsghallanai@gmail.com</p>
             </div>
           </div>
         </div>
@@ -173,7 +173,7 @@ export default function Contact() {
             </div>
 
             {/* Map and Additional Info */}
-          {/* Map and Additional Info */}
+          
 <div className="slide-up delay-400">
   <h2 className="text-3xl font-bold text-gray-800 mb-6">Find Us</h2>
   
