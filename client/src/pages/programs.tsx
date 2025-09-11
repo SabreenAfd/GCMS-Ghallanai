@@ -39,7 +39,7 @@ export default function Programs() {
     <div className="min-h-screen page-fade-in">
       <Header />
       
-      {/* Page Header */}
+      {/* Page Header: KEEP THIS GRADIENT */}
       <section className="bg-gradient-to-r from-primary to-secondary text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 slide-up">Academic Programs</h1>
@@ -48,12 +48,12 @@ export default function Programs() {
       </section>
 
       {/* Academic Programs Section */}
-      <div className="slide-up delay-400">
+      <div className="slide-up delay-400 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-16">
         <AcademicPrograms />
       </div>
 
       {/* Detailed Programs Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 slide-up">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Program Details</h2>
@@ -96,7 +96,7 @@ export default function Programs() {
       </section>
 
       {/* Admission Requirements */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 slide-up">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Admission Requirements</h2>

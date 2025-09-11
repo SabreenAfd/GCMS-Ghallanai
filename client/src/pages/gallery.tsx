@@ -3,22 +3,29 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import GallerySection from "@/components/gallery-section";
 
+// Import your local images
+import footballImage from "@/assets/football-team.jpg";
+import volleyballImage from "@/assets/volleyball-team.jpg";
+import ceremonyImage1 from "@/assets/ceremony-1.jpg";
+import ceremonyImage2 from "@/assets/ceremony-2.jpg";
+import ceremonyImage3 from "@/assets/ceremony-3.jpg";
+
 const galleryCategories = [
   {
     title: "Academic Events",
     images: [
       {
-        src: "https://www.gcmsmardan.edu.pk/uploads/gallery/6852790f58de4.jpeg",
+        src: ceremonyImage1,
         alt: "Annual Prize Distribution Ceremony",
         description: "Students receiving awards at the annual ceremony"
       },
       {
-        src: "https://www.gcmsmardan.edu.pk/uploads/gallery/685278d95e246.jpeg",
+        src: ceremonyImage2,
         alt: "Graduation Ceremony",
         description: "Graduates celebrating their achievements"
       },
       {
-        src: "https://www.gcmsmardan.edu.pk/uploads/gallery/685277643d9c4.jpg",
+        src: ceremonyImage3,
         alt: "Academic Conference",
         description: "Faculty and students at academic conference"
       }
@@ -28,14 +35,14 @@ const galleryCategories = [
     title: "Sports Activities",
     images: [
       {
-        src: "https://www.gcmsmardan.edu.pk/uploads/sports/68539b5da5f86.jpg",
+        src: footballImage,
         alt: "Hockey Team",
         description: "Hockey team in action during championship"
       },
       {
-        src: "https://www.gcmsmardan.edu.pk/uploads/sports/67e92a0c55d31.jpg",
+        src: volleyballImage,
         alt: "Cricket Match",
-        description: "Cricket team during inter-college tournament"
+        description: "Cricket team during inter-school tournament"
       }
     ]
   },
@@ -43,17 +50,17 @@ const galleryCategories = [
     title: "Campus Life",
     images: [
       {
-        src: "https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=500",
+        src: volleyballImage,
         alt: "Campus View",
         description: "Beautiful view of our campus grounds"
       },
       {
-        src: "https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=500",
+        src: volleyballImage,
         alt: "Library",
         description: "Students studying in our well-equipped library"
       },
       {
-        src: "https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=500",
+        src: volleyballImage,
         alt: "Classroom",
         description: "Modern classroom facilities"
       }
@@ -74,17 +81,19 @@ export default function Gallery() {
       <section className="bg-gradient-to-r from-primary to-secondary text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 slide-up">Gallery</h1>
-          <p className="text-xl opacity-90 slide-up delay-200">Capturing memorable moments at GCMS</p>
+          <p className="text-xl opacity-90 slide-up delay-200">
+            Capturing memorable moments at GCMS Ghallanai
+          </p>
         </div>
       </section>
 
       {/* Main Gallery Section */}
-      <div className="slide-up delay-400">
+      <div className="slide-up delay-400 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <GallerySection />
       </div>
 
       {/* Category-wise Gallery */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
           {galleryCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="mb-16">
@@ -121,11 +130,13 @@ export default function Gallery() {
       </section>
 
       {/* Video Gallery Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 slide-up">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Video Gallery</h2>
-            <p className="text-gray-600 text-lg">Watch our institutional highlights and events</p>
+            <p className="text-gray-600 text-lg">
+              Watch our institutional highlights and events
+            </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="slide-up delay-200">
@@ -161,17 +172,21 @@ export default function Gallery() {
       </section>
 
       {/* Photo Upload Section */}
-      <section className="py-16 bg-primary text-white">
+      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 text-gray-800">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto slide-up">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Share Your Moments</h2>
             <p className="text-xl opacity-90 mb-8">
-              Have photos from GCMS events? Share them with our community!
+              Have photos from GCMS Ghallanai events? Share them with our community!
             </p>
-            <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <a
+              href=""
+              target="_blank"
+              className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors inline-flex items-center justify-center"
+            >
               <i className="fas fa-upload mr-2"></i>
               Submit Photos
-            </button>
+            </a>
           </div>
         </div>
       </section>

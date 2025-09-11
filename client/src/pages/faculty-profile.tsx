@@ -20,7 +20,7 @@ export default function FacultyProfile() {
     return (
       <div className="min-h-screen page-fade-in">
         <Header />
-        <div className="container mx-auto px-4 py-20 text-center">
+        <div className="container mx-auto px-4 py-20 text-center bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 min-h-screen">
           <div className="max-w-2xl mx-auto">
             <div className="mb-8">
               <i className="fas fa-user-slash text-6xl text-gray-300 mb-4"></i>
@@ -131,7 +131,7 @@ export default function FacultyProfile() {
       </section>
 
       {/* Enhanced Contact Information */}
-      <section className="py-12 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-12 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-3 gap-6 slide-up delay-400">
@@ -170,7 +170,7 @@ export default function FacultyProfile() {
       </section>
 
       {/* Enhanced Main Content */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             
@@ -180,97 +180,31 @@ export default function FacultyProfile() {
                 <h2 className="text-4xl font-bold text-gray-800 mb-4">Biography</h2>
                 <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
               </div>
-              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-8 md:p-12 shadow-lg">
+              <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg">
                 <p className="text-gray-700 leading-relaxed text-lg text-center md:text-left">{faculty.bio}</p>
               </div>
             </div>
 
             {/* Enhanced Information Grid */}
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="grid md:grid-cols-1 gap-8 mb-16">
               
-              {/* Education */}
+              {/* Education - Full width */}
               <div className="slide-up delay-700">
-                <Card className="h-full shadow-xl border-0 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
+                <Card className="shadow-xl border-0 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group bg-white">
                   <CardContent className="p-8">
-                    <div className="flex items-center mb-6">
-                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                        <i className="fas fa-graduation-cap text-white text-xl"></i>
+                    <div className="flex items-center mb-6 justify-center">
+                      <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform duration-300">
+                        <i className="fas fa-graduation-cap text-white text-2xl"></i>
                       </div>
-                      <h3 className="text-2xl font-bold text-gray-800">Education</h3>
+                      <div>
+                        <h3 className="text-3xl font-bold text-gray-800 mb-2">Education</h3>
+                        <div className="w-16 h-1 bg-blue-500"></div>
+                      </div>
                     </div>
-                    <div className="space-y-4">
+                    <div className="space-y-6">
                       {faculty.education.map((edu, index) => (
-                        <div key={index} className="flex items-start">
-                          <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                          <p className="text-gray-700 leading-relaxed">{edu}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Specializations */}
-              <div className="slide-up delay-800">
-                <Card className="h-full shadow-xl border-0 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
-                  <CardContent className="p-8">
-                    <div className="flex items-center mb-6">
-                      <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                        <i className="fas fa-star text-white text-xl"></i>
-                      </div>
-                      <h3 className="text-2xl font-bold text-gray-800">Specializations</h3>
-                    </div>
-                    <div className="flex flex-wrap gap-3">
-                      {faculty.specialization.map((spec, index) => (
-                        <span
-                          key={index}
-                          className="bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-4 py-2 rounded-xl font-medium border border-blue-200 hover:shadow-md transition-all duration-300"
-                        >
-                          {spec}
-                        </span>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Courses */}
-              <div className="slide-up delay-900">
-                <Card className="h-full shadow-xl border-0 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
-                  <CardContent className="p-8">
-                    <div className="flex items-center mb-6">
-                      <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                        <i className="fas fa-book text-white text-xl"></i>
-                      </div>
-                      <h3 className="text-2xl font-bold text-gray-800">Courses Taught</h3>
-                    </div>
-                    <div className="space-y-4">
-                      {faculty.courses.map((course, index) => (
-                        <div key={index} className="flex items-start">
-                          <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                          <p className="text-gray-700 leading-relaxed">{course}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Research Areas */}
-              <div className="slide-up delay-1000">
-                <Card className="h-full shadow-xl border-0 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
-                  <CardContent className="p-8">
-                    <div className="flex items-center mb-6">
-                      <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                        <i className="fas fa-flask text-white text-xl"></i>
-                      </div>
-                      <h3 className="text-2xl font-bold text-gray-800">Research Areas</h3>
-                    </div>
-                    <div className="space-y-4">
-                      {faculty.research.map((research, index) => (
-                        <div key={index} className="flex items-start">
-                          <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                          <p className="text-gray-700 leading-relaxed">{research}</p>
+                        <div key={index} className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-6 border-l-4 border-blue-500">
+                          <p className="text-gray-700 leading-relaxed text-lg">{edu}</p>
                         </div>
                       ))}
                     </div>
@@ -278,61 +212,6 @@ export default function FacultyProfile() {
                 </Card>
               </div>
             </div>
-
-            {/* Publications */}
-            {faculty.publications.length > 0 && (
-              <div className="mb-12 slide-up delay-1100">
-                <Card className="shadow-2xl border-0 hover:shadow-3xl transition-all duration-300">
-                  <CardContent className="p-8 md:p-12">
-                    <div className="flex items-center mb-8">
-                      <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mr-6">
-                        <i className="fas fa-file-alt text-white text-2xl"></i>
-                      </div>
-                      <div>
-                        <h3 className="text-3xl font-bold text-gray-800 mb-2">Publications</h3>
-                        <div className="w-16 h-1 bg-indigo-500"></div>
-                      </div>
-                    </div>
-                    <div className="space-y-6">
-                      {faculty.publications.map((publication, index) => (
-                        <div key={index} className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-6 border-l-4 border-indigo-500">
-                          <p className="text-gray-700 leading-relaxed text-lg italic">"{publication}"</p>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            )}
-
-            {/* Achievements */}
-            {faculty.achievements.length > 0 && (
-              <div className="slide-up delay-1200">
-                <Card className="shadow-2xl border-0 hover:shadow-3xl transition-all duration-300">
-                  <CardContent className="p-8 md:p-12">
-                    <div className="flex items-center mb-8">
-                      <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mr-6">
-                        <i className="fas fa-trophy text-white text-2xl"></i>
-                      </div>
-                      <div>
-                        <h3 className="text-3xl font-bold text-gray-800 mb-2">Achievements & Awards</h3>
-                        <div className="w-16 h-1 bg-yellow-500"></div>
-                      </div>
-                    </div>
-                    <div className="grid md:grid-cols-2 gap-6">
-                      {faculty.achievements.map((achievement, index) => (
-                        <div key={index} className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-6 border border-yellow-200 hover:shadow-md transition-all duration-300">
-                          <div className="flex items-start">
-                            <i className="fas fa-award text-yellow-600 text-xl mr-4 mt-1"></i>
-                            <p className="text-gray-700 leading-relaxed font-medium">{achievement}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            )}
 
           </div>
         </div>

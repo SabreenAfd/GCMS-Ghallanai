@@ -26,7 +26,6 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you soon.');
     setFormData({
@@ -41,7 +40,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen page-fade-in">
       <Header />
-      
+
       {/* Page Header */}
       <section className="bg-gradient-to-r from-primary to-secondary text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -51,7 +50,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
             <div className="text-center slide-up delay-200">
@@ -80,7 +79,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Form and Map */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
@@ -89,9 +88,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name *
-                    </label>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
                     <input
                       type="text"
                       id="name"
@@ -104,9 +101,7 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address *
-                    </label>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
                     <input
                       type="email"
                       id="email"
@@ -122,9 +117,7 @@ export default function Contact() {
                 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number
-                    </label>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
                     <input
                       type="tel"
                       id="phone"
@@ -136,9 +129,7 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                      Subject *
-                    </label>
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">Subject *</label>
                     <select
                       id="subject"
                       name="subject"
@@ -158,9 +149,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message *</label>
                   <textarea
                     id="message"
                     name="message"
@@ -184,71 +173,78 @@ export default function Contact() {
             </div>
 
             {/* Map and Additional Info */}
-            <div className="slide-up delay-400">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">Find Us</h2>
-              
-              {/* Placeholder Map */}
-              <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center mb-6">
-                <div className="text-center">
-                  <i className="fas fa-map text-4xl text-gray-400 mb-4"></i>
-                  <p className="text-gray-500">Interactive Map</p>
-                  <p className="text-sm text-gray-400">Ghallanai, Khyber Pakhtunkhwa</p>
-                </div>
-              </div>
+          {/* Map and Additional Info */}
+<div className="slide-up delay-400">
+  <h2 className="text-3xl font-bold text-gray-800 mb-6">Find Us</h2>
+  
+  {/* Google Maps Embed */}
+  <div className="rounded-lg overflow-hidden mb-6 shadow-lg">
+    <iframe
+      title="GCMS Ghallanai Location"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3411.663167433186!2d71.95668831513584!3d34.98016848043486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d925ad312be0c1%3A0xe7e51b92f1348e7a!2sGovt.%20College%20Mardan%20Ghallanai!5e0!3m2!1sen!2s!4v1694430000000!5m2!1sen!2s"
+      width="100%"
+      height="300"
+      style={{ border: 0 }}
+      allowFullScreen={false}
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
 
-              {/* Office Hours */}
-              <div className="bg-white rounded-lg p-6 shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Office Hours</h3>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Monday - Thursday:</span>
-                    <span className="font-medium">8:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Friday:</span>
-                    <span className="font-medium">8:00 AM - 12:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Saturday - Sunday:</span>
-                    <span className="font-medium text-red-500">Closed</span>
-                  </div>
-                </div>
-              </div>
+  {/* Office Hours */}
+  <div className="bg-white rounded-lg p-6 shadow-lg">
+    <h3 className="text-xl font-semibold text-gray-800 mb-4">Office Hours</h3>
+    <div className="space-y-2">
+      <div className="flex justify-between">
+        <span className="text-gray-600">Monday - Thursday:</span>
+        <span className="font-medium">8:00 AM - 4:00 PM</span>
+      </div>
+      <div className="flex justify-between">
+        <span className="text-gray-600">Friday:</span>
+        <span className="font-medium">8:00 AM - 12:00 PM</span>
+      </div>
+      <div className="flex justify-between">
+        <span className="text-gray-600">Saturday - Sunday:</span>
+        <span className="font-medium text-red-500">Closed</span>
+      </div>
+    </div>
+  </div>
 
-              {/* Quick Contact */}
-              <div className="bg-primary text-white rounded-lg p-6 mt-6">
-                <h3 className="text-xl font-semibold mb-4">Quick Contact</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <i className="fas fa-user-tie"></i>
-                    <div>
-                      <p className="font-medium">Principal Office</p>
-                      <p className="text-sm opacity-90">For administrative matters</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <i className="fas fa-graduation-cap"></i>
-                    <div>
-                      <p className="font-medium">Admission Office</p>
-                      <p className="text-sm opacity-90">For enrollment inquiries</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <i className="fas fa-trophy"></i>
-                    <div>
-                      <p className="font-medium">Sports Department</p>
-                      <p className="text-sm opacity-90">For sports activities</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+  {/* Quick Contact */}
+  <div className="bg-primary text-white rounded-lg p-6 mt-6">
+    <h3 className="text-xl font-semibold mb-4">Quick Contact</h3>
+    <div className="space-y-3">
+      <div className="flex items-center space-x-3">
+        <i className="fas fa-user-tie"></i>
+        <div>
+          <p className="font-medium">Principal Office</p>
+          <p className="text-sm opacity-90">For administrative matters</p>
+        </div>
+      </div>
+      <div className="flex items-center space-x-3">
+        <i className="fas fa-graduation-cap"></i>
+        <div>
+          <p className="font-medium">Admission Office</p>
+          <p className="text-sm opacity-90">For enrollment inquiries</p>
+        </div>
+      </div>
+      <div className="flex items-center space-x-3">
+        <i className="fas fa-trophy"></i>
+        <div>
+          <p className="font-medium">Sports Department</p>
+          <p className="text-sm opacity-90">For sports activities</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 slide-up">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>

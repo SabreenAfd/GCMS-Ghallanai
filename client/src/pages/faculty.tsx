@@ -9,23 +9,23 @@ import { facultyMembers } from "@/lib/faculty-data";
 const departments = [
   {
     name: "Commerce Department",
-    head: "Dr. Muhammad Ali",
+    head: "Abdul Kabir",
     description: "Leading experts in commerce and business studies",
     icon: "fas fa-chart-line",
     color: "bg-gradient-to-br from-blue-500 to-blue-600"
   },
   {
     name: "Management Sciences",
-    head: "Dr. Sarah Ahmad", 
+    head: "Najeeb Ullah", 
     description: "Experienced faculty in management and administration",
     icon: "fas fa-users-cog",
     color: "bg-gradient-to-br from-green-500 to-green-600"
   },
   {
-    name: "Computer Science",
-    head: "Mr. Ahmad Khan",
-    description: "Technology experts and programming specialists",
-    icon: "fas fa-laptop-code",
+    name: "English Department",
+    head: "Fawad Ali Azeemi",
+    description: "Literature experts and language specialists",
+    icon: "fas fa-book-open",
     color: "bg-gradient-to-br from-purple-500 to-purple-600"
   }
 ];
@@ -54,15 +54,14 @@ export default function Faculty() {
               Our Faculty
             </h1>
             <p className="text-xl md:text-2xl opacity-90 slide-up delay-200 leading-relaxed max-w-2xl mx-auto">
-              Meet our dedicated educators and mentors who shape tomorrow's leaders
+              Meet our dedicated educators and mentors at GCMS Ghallanai
             </p>
-            
           </div>
         </div>
       </section>
 
       {/* All Faculty Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 slide-up">
             <div className="inline-block">
@@ -117,7 +116,7 @@ export default function Faculty() {
                       className="text-gray-500 font-medium text-sm"
                       data-testid={`text-faculty-qualification-${member.id}`}
                     >
-                      🎓 {member.qualification}
+                      {member.qualification}
                     </p>
                   </div>
 
@@ -162,7 +161,7 @@ export default function Faculty() {
       </section>
 
       {/* Enhanced Departments Section */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute top-0 left-0 w-64 h-64 bg-blue-100 rounded-full -translate-x-32 -translate-y-32 opacity-50"></div>
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-indigo-100 rounded-full translate-x-32 translate-y-32 opacity-50"></div>
@@ -201,7 +200,7 @@ export default function Faculty() {
       </section>
 
       {/* Enhanced Faculty Achievements */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 slide-up">
             <div className="inline-block">
@@ -226,13 +225,13 @@ export default function Faculty() {
                   </div>
                 </div>
                 <p className="text-blue-100 leading-relaxed text-lg">
-                  Our faculty has published over <span className="font-bold text-white">50 research papers</span> in national and international journals, contributing to academic knowledge and innovation.
+                  Our faculty has published over <span className="font-bold text-white">25 research papers</span> in national and international journals, contributing to academic knowledge and regional development.
                 </p>
               </div>
             </div>
             
             <div className="slide-up delay-400">
-              <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 group">
+              <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 group">
                 <div className="flex items-center mb-6">
                   <div className="bg-white/20 p-4 rounded-2xl mr-4 group-hover:scale-110 transition-transform duration-300">
                     <i className="fas fa-trophy text-4xl"></i>
@@ -243,7 +242,7 @@ export default function Faculty() {
                   </div>
                 </div>
                 <p className="text-emerald-100 leading-relaxed text-lg">
-                  Multiple faculty members have received <span className="font-bold text-white">excellence awards</span> for their outstanding teaching and research contributions to the academic community.
+                  Multiple faculty members have received <span className="font-bold text-white">excellence awards</span> for their outstanding teaching and research contributions to education in tribal areas.
                 </p>
               </div>
             </div>

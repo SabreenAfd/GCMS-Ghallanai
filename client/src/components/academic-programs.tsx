@@ -30,7 +30,7 @@ const programs = [
   {
     code: "BS CS",
     duration: "4 Years",
-    title: "Bachelor of Science in Computer Science",
+    title: "Bachelor of Science in CS",
     description: "Advanced computing degree with software development, algorithms, and system design.",
     available: true,
     featured: true
