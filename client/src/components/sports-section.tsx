@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 
 import footballImage from "@/assets/football-team.jpg";
 import volleyballImage from "@/assets/volleyball-team.jpg";
-// You could add more image imports for actual sports at GCMS Ghallanai
+
 
 const sports = [
   {
@@ -18,7 +18,7 @@ const sports = [
     description: "Volleyball is one of the most popular sports among students here. GCMS Ghallanai has participated in several district level volleyball tournaments, often finishing among the top teams.",
     image: volleyballImage
   }
-  // you can add more sports objects: e.g. Badminton, Athletics, Cricket, etc.
+  
 ];
 
 export default function SportsSection() {

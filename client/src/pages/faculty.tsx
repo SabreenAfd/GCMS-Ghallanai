@@ -40,8 +40,7 @@ export default function Faculty() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800 text-white py-24 overflow-hidden">
-        {/* Background Pattern */}
+      <section className="relative bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='7' cy='7' r='7'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -50,10 +49,10 @@ export default function Faculty() {
         
         <div className="container mx-auto px-4 text-center relative">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 slide-up bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-extrabold mb-6 slide-up bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Our Faculty
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 slide-up delay-200 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl opacity-90 slide-up delay-200 leading-relaxed max-w-2xl mx-auto">
               Meet our dedicated educators and mentors at GCMS Ghallanai
             </p>
           </div>
@@ -61,98 +60,86 @@ export default function Faculty() {
       </section>
 
       {/* All Faculty Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 slide-up">
+          <div className="text-center mb-12 slide-up">
             <div className="inline-block">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">All Faculty Members</h2>
-              <div className="w-24 h-1 bg-blue-600 mx-auto mb-4"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">All Faculty Members</h2>
+              <div className="w-20 h-1 bg-blue-600 mx-auto mb-4"></div>
             </div>
-            <p className="text-gray-600 text-xl max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
               Complete list of our experienced educators dedicated to excellence in teaching and research
             </p>
           </div>
 
-          {/* Enhanced Faculty Cards Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {/* Simplified Faculty Cards Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {facultyMembers.map((member, index) => (
               <Card
                 key={member.id}
-                className={`bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border-0 group slide-up delay-${(index + 1) * 100}`}
+                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 overflow-hidden group h-full flex flex-col"
                 data-testid={`card-faculty-${member.id}`}
               >
-                {/* Enhanced Image Container */}
-                <div className="relative overflow-hidden">
+                {/* Enhanced Professional Image Container */}
+                <div className="relative overflow-hidden flex-shrink-0 group-hover:shadow-xl transition-shadow duration-300">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-72 object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-80 object-cover object-top group-hover:scale-110 transition-transform duration-500"
                     data-testid={`img-faculty-${member.id}`}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
-                  {/* Experience Badge */}
-                  <div className="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                  {/* Enhanced Experience Badge */}
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-xs font-bold px-3 py-2 rounded-full shadow-lg backdrop-blur-sm border border-white/20">
                     {member.experience}
                   </div>
+
+                  {/* Decorative Corner */}
+                  <div className="absolute top-0 left-0 w-0 h-0 border-l-[40px] border-l-blue-500/20 border-t-[40px] border-t-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
 
                 {/* Enhanced Content */}
-                <CardContent className="p-8">
-                  <div className="text-center mb-6">
+                <CardContent className="p-5 flex flex-col flex-grow bg-gradient-to-b from-white to-gray-50/50">
+                  <div className="mb-4 flex-grow text-center">
                     <h3
-                      className="text-2xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300"
+                      className="text-xl font-bold text-gray-900 mb-3 leading-tight h-12 flex items-center justify-center group-hover:text-blue-600 transition-colors duration-300"
                       data-testid={`text-faculty-name-${member.id}`}
                     >
                       {member.name}
                     </h3>
                     <p
-                      className="text-blue-600 font-semibold text-lg mb-1"
+                      className="text-blue-600 font-semibold text-base mb-2 h-6"
                       data-testid={`text-faculty-position-${member.id}`}
                     >
                       {member.position}
                     </p>
                     <p
-                      className="text-gray-500 font-medium text-sm"
+                      className="text-gray-500 text-sm font-medium mb-2 h-5"
+                      data-testid={`text-faculty-department-${member.id}`}
+                    >
+                      {member.department}
+                    </p>
+                    <p
+                      className="text-gray-600 text-sm mb-3 h-5 italic"
                       data-testid={`text-faculty-qualification-${member.id}`}
                     >
                       {member.qualification}
                     </p>
                   </div>
 
-                  <div className="space-y-4 mb-6">
-                    <div className="text-center">
-                      <p className="text-gray-600 text-sm font-medium">{member.department}</p>
-                    </div>
-
-                    {/* Specializations */}
-                    <div className="flex flex-wrap justify-center gap-2">
-                      {member.specialization.slice(0, 2).map((spec, idx) => (
-                        <span
-                          key={idx}
-                          className="bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 text-xs font-medium px-3 py-1 rounded-full border border-blue-200"
-                        >
-                          {spec}
-                        </span>
-                      ))}
-                      {member.specialization.length > 2 && (
-                        <span className="bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1 rounded-full">
-                          +{member.specialization.length - 2} more
-                        </span>
-                      )}
-                    </div>
+                  {/* Enhanced Button */}
+                  <div className="mt-auto">
+                    <Link
+                      href={`/faculty/${member.slug}`}
+                      data-testid={`link-faculty-profile-${member.id}`}
+                    >
+                      <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-sm py-3 rounded-lg transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 border border-blue-500/20">
+                        <span className="mr-2">View Profile</span>
+                        <i className="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform duration-300"></i>
+                      </Button>
+                    </Link>
                   </div>
-
-                  {/* Enhanced View Profile Button */}
-                  <Link
-                    href={`/faculty/${member.slug}`}
-                    data-testid={`link-faculty-profile-${member.id}`}
-                  >
-                    <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group-hover:scale-105">
-                      <span className="mr-2">View Profile</span>
-                      <i className="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
-                    </Button>
-                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -160,37 +147,36 @@ export default function Faculty() {
         </div>
       </section>
 
-      {/* Enhanced Departments Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute top-0 left-0 w-64 h-64 bg-blue-100 rounded-full -translate-x-32 -translate-y-32 opacity-50"></div>
-        <div className="absolute bottom-0 right-0 w-64 h-64 bg-indigo-100 rounded-full translate-x-32 translate-y-32 opacity-50"></div>
+      {/* Simplified Departments Section */}
+      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-32 h-32 bg-blue-100 rounded-full -translate-x-16 -translate-y-16 opacity-50"></div>
+        <div className="absolute bottom-0 right-0 w-32 h-32 bg-indigo-100 rounded-full translate-x-16 translate-y-16 opacity-50"></div>
         
         <div className="container mx-auto px-4 relative">
-          <div className="text-center mb-16 slide-up">
+          <div className="text-center mb-12 slide-up">
             <div className="inline-block">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our Departments</h2>
-              <div className="w-24 h-1 bg-blue-600 mx-auto mb-4"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Departments</h2>
+              <div className="w-20 h-1 bg-blue-600 mx-auto mb-4"></div>
             </div>
-            <p className="text-gray-600 text-xl max-w-2xl mx-auto leading-relaxed">
-              Academic divisions led by experienced professionals committed to excellence
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+              Academic divisions led by experienced professionals
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {departments.map((dept, index) => (
               <div key={index} className={`slide-up delay-${(index + 1) * 200}`}>
-                <div className="bg-white rounded-2xl shadow-xl p-8 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 group">
-                  <div className={`w-20 h-20 ${dept.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                    <i className={`${dept.icon} text-white text-3xl`}></i>
+                <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 group">
+                  <div className={`w-16 h-16 ${dept.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
+                    <i className={`${dept.icon} text-white text-2xl`}></i>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                     {dept.name}
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{dept.description}</p>
-                  <div className="border-t border-gray-100 pt-6">
-                    <p className="text-sm text-gray-500 mb-1">Department Head</p>
-                    <p className="font-bold text-blue-600 text-lg">{dept.head}</p>
+                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">{dept.description}</p>
+                  <div className="border-t border-gray-100 pt-4">
+                    <p className="text-xs text-gray-500 mb-1">Department Head</p>
+                    <p className="font-bold text-blue-600">{dept.head}</p>
                   </div>
                 </div>
               </div>
@@ -199,50 +185,50 @@ export default function Faculty() {
         </div>
       </section>
 
-      {/* Enhanced Faculty Achievements */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      {/* Simplified Faculty Achievements */}
+      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 slide-up">
+          <div className="text-center mb-12 slide-up">
             <div className="inline-block">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Faculty Achievements</h2>
-              <div className="w-24 h-1 bg-blue-600 mx-auto mb-4"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Faculty Achievements</h2>
+              <div className="w-20 h-1 bg-blue-600 mx-auto mb-4"></div>
             </div>
-            <p className="text-gray-600 text-xl max-w-2xl mx-auto leading-relaxed">
-              Recognition and accomplishments that showcase our commitment to excellence
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+              Recognition that showcases our commitment to excellence
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div className="slide-up delay-200">
-              <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 group">
-                <div className="flex items-center mb-6">
-                  <div className="bg-white/20 p-4 rounded-2xl mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <i className="fas fa-award text-4xl"></i>
+              <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                <div className="flex items-center mb-4">
+                  <div className="bg-white/20 p-3 rounded-xl mr-3 group-hover:scale-110 transition-transform duration-300">
+                    <i className="fas fa-award text-2xl"></i>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">Research Publications</h3>
-                    <div className="w-16 h-1 bg-blue-300"></div>
+                    <h3 className="text-xl font-bold mb-1">Research Publications</h3>
+                    <div className="w-12 h-0.5 bg-blue-300"></div>
                   </div>
                 </div>
-                <p className="text-blue-100 leading-relaxed text-lg">
-                  Our faculty has published over <span className="font-bold text-white">25 research papers</span> in national and international journals, contributing to academic knowledge and regional development.
+                <p className="text-blue-100 leading-relaxed">
+                  Our faculty has published over <span className="font-bold text-white">25 research papers</span> in national and international journals.
                 </p>
               </div>
             </div>
             
             <div className="slide-up delay-400">
-              <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 group">
-                <div className="flex items-center mb-6">
-                  <div className="bg-white/20 p-4 rounded-2xl mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <i className="fas fa-trophy text-4xl"></i>
+              <div className="bg-gradient-to-br from-green-500 to-green-600 text-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                <div className="flex items-center mb-4">
+                  <div className="bg-white/20 p-3 rounded-xl mr-3 group-hover:scale-110 transition-transform duration-300">
+                    <i className="fas fa-trophy text-2xl"></i>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">Academic Awards</h3>
-                    <div className="w-16 h-1 bg-emerald-300"></div>
+                    <h3 className="text-xl font-bold mb-1">Academic Awards</h3>
+                    <div className="w-12 h-0.5 bg-green-300"></div>
                   </div>
                 </div>
-                <p className="text-emerald-100 leading-relaxed text-lg">
-                  Multiple faculty members have received <span className="font-bold text-white">excellence awards</span> for their outstanding teaching and research contributions to education in tribal areas.
+                <p className="text-green-100 leading-relaxed">
+                  Multiple faculty members have received <span className="font-bold text-white">excellence awards</span> for outstanding teaching contributions.
                 </p>
               </div>
             </div>

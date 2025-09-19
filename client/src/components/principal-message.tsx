@@ -25,7 +25,7 @@ export default function PrincipalMessage() {
                   <img
                     src={principalImg}
                     alt="Ali Bahadar - Principal GCMS Ghallanai"
-                    className="w-64 h-80 object-cover rounded-lg shadow-lg mx-auto border-4 border-gray-100"
+                    className="w-65 h-80 object-cover rounded-lg shadow-lg mx-auto border-4 border-gray-100"
                     data-testid="img-principal"
                   />
                 </div>

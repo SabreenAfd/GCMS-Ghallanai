@@ -47,7 +47,7 @@ export default function HeroCarousel() {
   }, []);
 
   return (
-    <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[750px] xl:h-[850px] overflow-hidden">
+    <div className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px] overflow-hidden">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -66,14 +66,14 @@ export default function HeroCarousel() {
           {/* Dark Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-          {/* Content + Poster */}
-          <div className="absolute inset-0 flex flex-col md:flex-row items-center justify-center md:justify-between text-center md:text-left px-6 md:px-12 gap-6 md:gap-10">
-            {/* Text */}
-            <div className="flex-1 text-white max-w-xl">
-              <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">
+          {/* Mobile/Tablet Layout */}
+          <div className="absolute inset-0 flex md:hidden flex-col items-center justify-center text-center px-6 gap-4">
+            {/* Text Content */}
+            <div className="text-white max-w-2xl">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-3 drop-shadow-lg">
                 {slide.title}
               </h2>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 drop-shadow-md">
+              <p className="text-sm sm:text-base mb-4 drop-shadow-md">
                 {slide.description}
               </p>
               <Button
@@ -82,24 +82,24 @@ export default function HeroCarousel() {
                 {slide.buttonText}
               </Button>
             </div>
-
-            {/* Poster (hidden on very small screens) */}
-            <div className="hidden sm:block w-52 md:w-72 lg:w-[420px] flex-shrink-0">
-              <img
-                src={poster}
-                alt="Admission Poster"
-                className="w-full h-auto rounded-2xl shadow-2xl border-4 border-white"
-              />
-            </div>
           </div>
 
-          {/* Poster Below Text (for mobile only) */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 block sm:hidden w-40">
-            <img
-              src={poster}
-              alt="Admission Poster"
-              className="w-full h-auto rounded-xl shadow-lg border-2 border-white"
-            />
+          {/* Desktop Layout */}
+          <div className="absolute inset-0 hidden md:flex items-center justify-center text-center px-8">
+            {/* Text */}
+            <div className="text-white max-w-2xl">
+              <h2 className="text-4xl lg:text-5xl font-bold mb-3 drop-shadow-lg">
+                {slide.title}
+              </h2>
+              <p className="text-base lg:text-lg mb-4 drop-shadow-md">
+                {slide.description}
+              </p>
+              <Button
+                className={`${slide.buttonStyle} px-6 py-2 text-base`}
+              >
+                {slide.buttonText}
+              </Button>
+            </div>
           </div>
         </div>
       ))}
@@ -121,6 +121,7 @@ export default function HeroCarousel() {
     </div>
   );
 }
+
 
 
 

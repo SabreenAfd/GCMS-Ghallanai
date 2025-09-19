@@ -6,26 +6,33 @@ import GallerySection from "@/components/gallery-section";
 // Import your local images
 import footballImage from "@/assets/football-team.jpg";
 import volleyballImage from "@/assets/volleyball-team.jpg";
-import ceremonyImage1 from "@/assets/ceremony-1.jpg";
-import ceremonyImage2 from "@/assets/ceremony-2.jpg";
-import ceremonyImage3 from "@/assets/ceremony-3.jpg";
+import sportImage from "@/assets/sports.jpg";
+import LabImage from "@/assets/Lab.jpg";
+import campusImage from "@/assets/hero1.jpg";
+import classImage from "@/assets/classroom.jpg";
+import event1Image from "@/assets/event1 (1).jpg";
+import event2Image from "@/assets/event1 (2).jpg";
+import event3Image from "@/assets/event1 (3).jpg";
+
+
+
 
 const galleryCategories = [
   {
     title: "Academic Events",
     images: [
       {
-        src: ceremonyImage1,
+        src: event1Image,
         alt: "Annual Prize Distribution Ceremony",
         description: "Students receiving awards at the annual ceremony"
       },
       {
-        src: ceremonyImage2,
+        src: event2Image,
         alt: "Graduation Ceremony",
         description: "Graduates celebrating their achievements"
       },
       {
-        src: ceremonyImage3,
+        src: event3Image,
         alt: "Academic Conference",
         description: "Faculty and students at academic conference"
       }
@@ -43,6 +50,12 @@ const galleryCategories = [
         src: volleyballImage,
         alt: "Cricket Match",
         description: "Cricket team during inter-school tournament"
+      },
+
+      {
+        src: sportImage,
+        alt: "Inter-college Sports",
+        description: "Energetic moments from inter-college sports competition"
       }
     ]
   },
@@ -50,17 +63,17 @@ const galleryCategories = [
     title: "Campus Life",
     images: [
       {
-        src: volleyballImage,
+        src: campusImage,
         alt: "Campus View",
         description: "Beautiful view of our campus grounds"
       },
       {
-        src: volleyballImage,
+        src: LabImage,
         alt: "Library",
         description: "Students studying in our well-equipped library"
       },
       {
-        src: volleyballImage,
+        src: classImage,
         alt: "Classroom",
         description: "Modern classroom facilities"
       }
