@@ -4,9 +4,10 @@ import Footer from "@/components/footer";
 import GallerySection from "@/components/gallery-section";
 
 // Import your local images
-import footballImage from "@/assets/football-team.jpg";
-import volleyballImage from "@/assets/volleyball-team.jpg";
-import sportImage from "@/assets/sports.jpg";
+
+import sportsImage from "@/assets/team1 (1).jpg";
+import teamImage from "@/assets/team1 (2).jpg";
+import sportImage from "@/assets/team1 (3).jpg";
 import LabImage from "@/assets/Lab.jpg";
 import campusImage from "@/assets/hero1.jpg";
 import classImage from "@/assets/classroom.jpg";
@@ -15,7 +16,7 @@ import event2Image from "@/assets/event1 (2).jpg";
 import event3Image from "@/assets/event1 (3).jpg";
 
 
-
+import annualFunctionVideo from "@/assets/annual-function.mp4";
 
 const galleryCategories = [
   {
@@ -42,18 +43,17 @@ const galleryCategories = [
     title: "Sports Activities",
     images: [
       {
-        src: footballImage,
+        src: sportsImage,
         alt: "Hockey Team",
         description: "Hockey team in action during championship"
       },
       {
-        src: volleyballImage,
+        src: sportImage,
         alt: "Cricket Match",
         description: "Cricket team during inter-school tournament"
       },
-
       {
-        src: sportImage,
+        src: teamImage,
         alt: "Inter-college Sports",
         description: "Energetic moments from inter-college sports competition"
       }
@@ -151,60 +151,26 @@ export default function Gallery() {
               Watch our institutional highlights and events
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="slide-up delay-200">
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="aspect-video bg-gray-200 flex items-center justify-center">
-                  <div className="text-center">
-                    <i className="fas fa-play-circle text-6xl text-primary mb-4"></i>
-                    <p className="text-gray-600">Annual Function 2024</p>
-                  </div>
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-gray-800">Annual Function Highlights</h3>
-                  <p className="text-sm text-gray-600">Best moments from our annual celebration</p>
-                </div>
-              </div>
-            </div>
-            <div className="slide-up delay-400">
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="aspect-video bg-gray-200 flex items-center justify-center">
-                  <div className="text-center">
-                    <i className="fas fa-play-circle text-6xl text-primary mb-4"></i>
-                    <p className="text-gray-600">Sports Championship</p>
-                  </div>
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-gray-800">Sports Victory</h3>
-                  <p className="text-sm text-gray-600">Our teams' winning moments</p>
-                </div>
+          <div className="max-w-3xl mx-auto slide-up delay-200">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <video
+                src={annualFunctionVideo}
+                controls
+                className="w-full h-auto"
+              />
+              <div className="p-4">
+                <h3 className="font-semibold text-gray-800">Annual Function Highlights</h3>
+                <p className="text-sm text-gray-600">Best moments from our annual celebration</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Photo Upload Section */}
-      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 text-gray-800">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto slide-up">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Share Your Moments</h2>
-            <p className="text-xl opacity-90 mb-8">
-              Have photos from GCMS Ghallanai events? Share them with our community!
-            </p>
-            <a
-              href=""
-              target="_blank"
-              className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors inline-flex items-center justify-center"
-            >
-              <i className="fas fa-upload mr-2"></i>
-              Submit Photos
-            </a>
-          </div>
-        </div>
-      </section>
+      
 
       <Footer />
     </div>
   );
 }
+

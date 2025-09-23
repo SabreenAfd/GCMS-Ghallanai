@@ -7,6 +7,7 @@ import GcmsLogo from "@/assets/logos/gcms-logo.png";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [location] = useLocation();
+  const [paused, setPaused] = useState(false);
 
   const isActive = (path: string) => location === path;
 
@@ -23,36 +24,39 @@ export default function Header() {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       {/* Top Flash Bar */}
-      <div className="bg-primary text-white py-2 overflow-hidden text-sm">
-  <div className="container mx-auto px-4">
-    <div className="flex items-center space-x-10 animate-marquee whitespace-nowrap">
-      <span className="flex items-center">
-        <i className="fas fa-bullhorn mr-2"></i>
-        Admissions open! GCMS Ghallanai offering BS Commerce, BS Computer Science, D.Com & FSc – Apply now.
-      </span>
-      <span className="flex items-center">
-        <i className="fas fa-laptop mr-2"></i>
-        FSc Computer Science Annual Examination-2025 in progress at GCMS Ghallanai.
-      </span>
-      <span className="flex items-center">
-        <i className="fas fa-phone mr-2"></i>
-        Contact: 0924-290310 | Email: gcmsghallanai@gmail.com
-      </span>
-    </div>
-  </div>
-</div>
-
+      <div
+        className="bg-primary text-white py-2 overflow-hidden text-sm cursor-pointer"
+        onClick={() => setPaused(!paused)}
+      >
+        <div className="container mx-auto px-4">
+          <div
+            className="flex items-center space-x-10 animate-marquee whitespace-nowrap"
+            style={{ animationPlayState: paused ? "paused" : "running" }}
+          >
+            <span className="flex items-center">
+              <i className="fas fa-bullhorn mr-2"></i>
+              Admissions open! GCMS Ghallanai offering BS Commerce, BS Computer
+              Science, D.Com & FSc – Apply now.
+            </span>
+            <span className="flex items-center">
+              <i className="fas fa-laptop mr-2"></i>
+              FSc Computer Science Annual Examination-2025 in progress at GCMS
+              Ghallanai.
+            </span>
+            <span className="flex items-center">
+              <i className="fas fa-phone mr-2"></i>
+              Contact: 0924-290310 | Email: gcmsghallanai@gmail.com
+            </span>
+          </div>
+        </div>
+      </div>
 
       {/* Main Navbar */}
       <nav className="border-b border-gray-200">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           {/* Logo + Title */}
           <Link href="/" className="flex items-center space-x-3">
-            <img
-              src={GcmsLogo }
-              alt="GCMS Logo"
-              className="h-12 w-auto"
-            />
+            <img src={GcmsLogo} alt="GCMS Logo" className="h-12 w-auto" />
             <span className="text-lg font-bold text-gray-800">
               GCMS Ghallanai
             </span>
@@ -67,7 +71,7 @@ export default function Header() {
                 className={`relative font-medium transition-colors duration-300 ${
                   isActive(item.path)
                     ? "text-primary after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-primary"
-                    : "text-gray-700 hover:text-primary hover:after:content-[''] hover:after:absolute hover:after:-bottom-1 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-primary"
+                    : "text-gray-700 hover:text-primary after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-primary hover:after:w-full"
                 }`}
               >
                 {item.label}
@@ -106,3 +110,4 @@ export default function Header() {
     </header>
   );
 }
+
