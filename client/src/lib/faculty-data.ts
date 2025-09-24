@@ -125,8 +125,8 @@ export const facultyMembers: FacultyMember[] = [
     slug: "zeeshan-haider",
     profileUrl: "/faculty/zeeshan-haider",
     specialization: ["HR Management", "Organizational Studies"],
-    education: ["MPhil Management - COMSATS (2016)"],
-    bio: "Dr. Zeeshan Haider specializes in human resource management."
+    education: ["MSC computer science"],
+    bio: "Dr. Zeeshan Haider specializes in Human Resource Management and serves as Co-ordinator at DIT, contributing to academic development and organizational growth."
   }
 ];
 
