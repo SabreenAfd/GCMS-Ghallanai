@@ -33,7 +33,7 @@ export default function PrincipalMessage() {
                   className="text-xl font-bold text-gray-800 mb-1"
                   data-testid="text-principal-name"
                 >
-                  Ali Bahadar
+                  Dr Mian Wajahat Hussain
                 </h3>
                 <p 
                   className="text-gray-600 text-sm font-medium"

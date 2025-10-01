@@ -93,6 +93,15 @@ export default function Footer() {
                   Gallery
                 </Link>
               </li>
+              <li>
+                <Link 
+                  href="/contact" 
+                  className="text-gray-300 hover:text-white transition-colors" 
+                  data-testid="link-footer-gallery"
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -113,10 +122,16 @@ export default function Footer() {
                 <p className="text-gray-300" data-testid="text-contact-phone">0305-9280626</p>
                 
                  </div>
-              <div className="flex items-center space-x-3">
-                <i className="fas fa-envelope text-primary"></i>
-                <p className="text-gray-300" data-testid="text-contact-email">gcmsghallanai@gmail.com</p>
-              </div>
+              <div className="flex items-start space-x-3">
+  <i className="fas fa-envelope text-primary mt-1 shrink-0"></i>
+  <p
+    className="text-gray-300 break-all text-sm md:text-base"
+    data-testid="text-contact-email"
+  >
+    gcmsghallanai@gmail.com
+  </p>
+</div>
+
             </div>
           </div>
         </div>

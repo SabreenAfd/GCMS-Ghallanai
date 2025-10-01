@@ -1,10 +1,8 @@
 import { useEffect } from "react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import GallerySection from "@/components/gallery-section";
 
 // Import your local images
-
 import sportsImage from "@/assets/team1 (1).jpg";
 import teamImage from "@/assets/team1 (2).jpg";
 import sportImage from "@/assets/team1 (3).jpg";
@@ -15,7 +13,6 @@ import event1Image from "@/assets/event1 (1).jpg";
 import event2Image from "@/assets/event1 (2).jpg";
 import event3Image from "@/assets/event1 (3).jpg";
 
-
 import annualFunctionVideo from "@/assets/annual-function.mp4";
 
 const galleryCategories = [
@@ -25,19 +22,19 @@ const galleryCategories = [
       {
         src: event1Image,
         alt: "Annual Prize Distribution Ceremony",
-        description: "Students receiving awards at the annual ceremony"
+        description: "Students receiving awards at the annual ceremony",
       },
       {
         src: event2Image,
         alt: "Graduation Ceremony",
-        description: "Graduates celebrating their achievements"
+        description: "Graduates celebrating their achievements",
       },
       {
         src: event3Image,
         alt: "Academic Conference",
-        description: "Faculty and students at academic conference"
-      }
-    ]
+        description: "Faculty and students at academic conference",
+      },
+    ],
   },
   {
     title: "Sports Activities",
@@ -45,19 +42,19 @@ const galleryCategories = [
       {
         src: sportsImage,
         alt: "Hockey Team",
-        description: "Hockey team in action during championship"
+        description: "Hockey team in action during championship",
       },
       {
         src: sportImage,
         alt: "Cricket Match",
-        description: "Cricket team during inter-school tournament"
+        description: "Cricket team during inter-school tournament",
       },
       {
         src: teamImage,
         alt: "Inter-college Sports",
-        description: "Energetic moments from inter-college sports competition"
-      }
-    ]
+        description: "Energetic moments from inter-college sports competition",
+      },
+    ],
   },
   {
     title: "Campus Life",
@@ -65,20 +62,20 @@ const galleryCategories = [
       {
         src: campusImage,
         alt: "Campus View",
-        description: "Beautiful view of our campus grounds"
+        description: "Beautiful view of our campus grounds",
       },
       {
         src: LabImage,
         alt: "Library",
-        description: "Students studying in our well-equipped library"
+        description: "Students studying in our well-equipped library",
       },
       {
         src: classImage,
         alt: "Classroom",
-        description: "Modern classroom facilities"
-      }
-    ]
-  }
+        description: "Modern classroom facilities",
+      },
+    ],
+  },
 ];
 
 export default function Gallery() {
@@ -87,66 +84,71 @@ export default function Gallery() {
   }, []);
 
   return (
-    <div className="min-h-screen page-fade-in">
+    <div className="min-h-screen page-fade-in bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <Header />
-      
+
       {/* Page Header */}
-      <section className="bg-gradient-to-r from-primary to-secondary text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 slide-up">Gallery</h1>
-          <p className="text-xl opacity-90 slide-up delay-200">
+      <section className="text-white py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+        <div className="container mx-auto px-4 text-center text-black">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 slide-up">
+            Gallery
+          </h1>
+          <p className="text-xl opacity-90 slide-up delay-200 ">
             Capturing memorable moments at GCMS Ghallanai
           </p>
         </div>
       </section>
 
-      {/* Main Gallery Section */}
-      <div className="slide-up delay-400 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-        <GallerySection />
-      </div>
-
-      {/* Category-wise Gallery */}
-      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-        <div className="container mx-auto px-4">
-          {galleryCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="mb-16">
-              <div className={`text-center mb-8 slide-up delay-${categoryIndex * 200}`}>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">{category.title}</h2>
-                <div className="w-24 h-1 bg-primary mx-auto"></div>
-              </div>
-              <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                {category.images.map((image, imageIndex) => (
-                  <div 
-                    key={imageIndex} 
-                    className={`group cursor-pointer slide-up delay-${(imageIndex + 1) * 100}`}
-                  >
-                    <div className="relative overflow-hidden rounded-xl shadow-lg">
-                      <img 
-                        src={image.src} 
-                        alt={image.alt} 
-                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
-                        <div className="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
-                          <i className="fas fa-search-plus text-2xl mb-2"></i>
-                          <p className="text-sm">{image.description}</p>
-                        </div>
+      {/* Main Content */}
+      <main className="container mx-auto px-4 py-12">
+        {galleryCategories.map((category, categoryIndex) => (
+          <div key={categoryIndex} className="mb-16">
+            <div
+              className={`text-center mb-8 slide-up delay-${
+                categoryIndex * 200
+              }`}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                {category.title}
+              </h2>
+              <div className="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {category.images.map((image, imageIndex) => (
+                <div
+                  key={imageIndex}
+                  className={`group cursor-pointer slide-up delay-${
+                    (imageIndex + 1) * 100
+                  }`}
+                >
+                  <div className="relative overflow-hidden rounded-xl shadow-lg">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
+                      <div className="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                        <i className="fas fa-search-plus text-2xl mb-2"></i>
+                        <p className="text-sm">{image.description}</p>
                       </div>
                     </div>
-                    <h4 className="mt-4 text-center font-semibold text-gray-800">{image.alt}</h4>
                   </div>
-                ))}
-              </div>
+                  <h4 className="mt-4 text-center font-semibold text-gray-800">
+                    {image.alt}
+                  </h4>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        ))}
 
-      {/* Video Gallery Section */}
-      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-        <div className="container mx-auto px-4">
+        {/* Video Gallery */}
+        <div className="mb-16">
           <div className="text-center mb-12 slide-up">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Video Gallery</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              Video Gallery
+            </h2>
             <p className="text-gray-600 text-lg">
               Watch our institutional highlights and events
             </p>
@@ -159,18 +161,21 @@ export default function Gallery() {
                 className="w-full h-auto"
               />
               <div className="p-4">
-                <h3 className="font-semibold text-gray-800">Annual Function Highlights</h3>
-                <p className="text-sm text-gray-600">Best moments from our annual celebration</p>
+                <h3 className="font-semibold text-gray-800">
+                  Annual Function Highlights
+                </h3>
+                <p className="text-sm text-gray-600">
+                  Best moments from our annual celebration
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
-
-      
+      </main>
 
       <Footer />
     </div>
   );
 }
+
 

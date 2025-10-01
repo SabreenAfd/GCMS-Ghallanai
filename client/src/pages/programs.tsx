@@ -39,13 +39,8 @@ export default function Programs() {
     <div className="min-h-screen page-fade-in">
       <Header />
       
-      {/* Page Header: KEEP THIS GRADIENT */}
-      <section className="bg-gradient-to-r from-primary to-secondary text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 slide-up">Academic Programs</h1>
-          <p className="text-xl opacity-90 slide-up delay-200">Discover our comprehensive educational offerings</p>
-        </div>
-      </section>
+      
+      
 
       {/* Academic Programs Section */}
       <div className="slide-up delay-400 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-16">

@@ -13,7 +13,7 @@ export default function About() {
       <Header />
       
       {/* Page Header*/}
-      <section className="bg-gradient-to-r from-primary to-secondary text-white py-20">
+      <section className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 text-black py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 slide-up">About Us</h1>
           <p className="text-xl opacity-90 slide-up delay-200">Learn more about GCMS Ghallanai</p>
@@ -21,7 +21,8 @@ export default function About() {
       </section>
 
       {/* Principal Message Section */}
-      <div className="slide-up delay-400 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-16">
+      <div className="slide-up delay-400 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 pt-0 py-16 leading-[5.25rem]">
+
         <PrincipalMessage />
       </div>
 

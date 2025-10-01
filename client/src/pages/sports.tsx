@@ -4,55 +4,56 @@ import Footer from "@/components/footer";
 import SportsSection from "@/components/sports-section";
 
 // -------------------- Achievements --------------------
-
 const achievements = [
   {
     sport: "Cricket",
-    title: "District Champions", 
-    description: "GCMS Ghallanai cricket team achieved distinction in district-level tournaments.", 
-    year: "2023-2024", 
+    title: "District Champions",
+    description:
+      "GCMS Ghallanai cricket team achieved distinction in district-level tournaments.",
+    year: "2023-2024",
     icon: "fas fa-trophy",
-    color: "bg-yellow-500"
+    color: "bg-yellow-500",
   },
   {
     sport: "Football",
-    title: "Regional Winners", 
-    description: "The football team represented GCMS Ghallanai in inter-college events and secured top positions.", // TODO
-    year: "2023", 
+    title: "Regional Winners",
+    description:
+      "The football team represented GCMS Ghallanai in inter-college events and secured top positions.",
+    year: "2023",
     icon: "fas fa-award",
-    color: "bg-green-500"
+    color: "bg-green-500",
   },
   {
     sport: "Volleyball",
-    title: "Strong Performers", 
-    description: "Volleyball is a leading sport at GCMS Ghallanai with active participation", 
-    year: "2024", 
+    title: "Strong Performers",
+    description:
+      "Volleyball is a leading sport at GCMS Ghallanai with active participation.",
+    year: "2024",
     icon: "fas fa-medal",
-    color: "bg-blue-500"
-  }
+    color: "bg-blue-500",
+  },
 ];
 
 // -------------------- Facilities --------------------
-
 const facilities = [
   {
     name: "Sports Ground",
-    description: "Multipurpose ground used for cricket, football, and athletics.", 
+    description: "Multipurpose ground used for cricket, football, and athletics.",
     icon: "fas fa-running",
-    features: ["Cricket Pitch", "Football Field", "Athletics Track"] 
+    features: ["Cricket Pitch", "Football Field", "Athletics Track"],
   },
   {
     name: "Indoor Facilities",
-    description: "Indoor hall for multiple sports and training sessions.", 
+    description: "Indoor hall for multiple sports and training sessions.",
     icon: "fas fa-dumbbell",
-    features: ["Badminton Court", "Table Tennis", "Fitness Center"] 
+    features: ["Badminton Court", "Table Tennis", "Fitness Center"],
   },
   {
     name: "Equipment",
-    description: "Standard sports gear provided for students.", 
+    description: "Standard sports gear provided for students.",
     icon: "fas fa-tools",
-    features: ["Cricket Kits", "Football Gear", "Volleyball Nets"] 
-  }
+    features: ["Cricket Kits", "Football Gear", "Volleyball Nets"],
+  },
 ];
 
 export default function Sports() {
@@ -63,22 +64,12 @@ export default function Sports() {
   return (
     <div className="min-h-screen page-fade-in">
       <Header />
-      
-      {/* Page Header */}
-      <section className="bg-gradient-to-r from-primary to-secondary text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 slide-up">
-            Sports & Athletics at GCMS Ghallanai
-          </h1>
-          <p className="text-xl opacity-90 slide-up delay-200">
-            Nurturing talent, discipline, and teamwork through competitive sports
-          </p>
-        </div>
-      </section>
+
+   
 
       {/* Sports Section */}
       <div className="slide-up delay-400">
-        <SportsSection />
+        <SportsSection expandable />
       </div>
 
       {/* Achievements Section */}
@@ -89,21 +80,32 @@ export default function Sports() {
               Our Achievements
             </h2>
             <p className="text-gray-600 text-lg">
-              Celebrating the victories and milestones of GCMS Ghallanai athletes
+              Celebrating the milestones and victories of GCMS Ghallanai athletes
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch">
             {achievements.map((achievement, index) => (
-              <div key={index} className={`slide-up delay-${(index + 1) * 200}`}>
-                <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
-                  <div className={`w-16 h-16 ${achievement.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                    <i className={`${achievement.icon} text-white text-2xl`}></i>
+              <div key={index} className={`slide-up delay-${(index + 1) * 200} h-full`}>
+                <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow h-full flex flex-col justify-between">
+                  <div>
+                    <div
+                      className={`w-16 h-16 ${achievement.color} rounded-full flex items-center justify-center mx-auto mb-4`}
+                    >
+                      <i className={`${achievement.icon} text-white text-2xl`}></i>
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                      {achievement.sport}
+                    </h3>
+                    <h4 className="text-lg font-medium text-primary mb-3">
+                      {achievement.title}
+                    </h4>
+                    <p className="text-gray-600 mb-3">{achievement.description}</p>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">{achievement.sport}</h3>
-                  <h4 className="text-lg font-medium text-primary mb-3">{achievement.title}</h4>
-                  <p className="text-gray-600 mb-3">{achievement.description}</p>
-                  <div className="bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-700 inline-block">
-                    {achievement.year}
+                  <div>
+                    <div className="bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-700 inline-block">
+                      {achievement.year}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -120,19 +122,24 @@ export default function Sports() {
               Sports Facilities
             </h2>
             <p className="text-gray-600 text-lg">
-              Supporting athletic growth with modern facilities
+              Supporting athletic growth with modern and well-equipped facilities
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
             {facilities.map((facility, index) => (
-              <div key={index} className={`slide-up delay-${(index + 1) * 200}`}>
-                <div className="bg-white rounded-xl shadow-lg p-6">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
-                    <i className={`${facility.icon} text-white text-xl`}></i>
+              <div key={index} className={`slide-up delay-${(index + 1) * 200} h-full`}>
+                <div className="bg-white rounded-xl shadow-lg p-6 h-full flex flex-col justify-between">
+                  <div>
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
+                      <i className={`${facility.icon} text-white text-xl`}></i>
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                      {facility.name}
+                    </h3>
+                    <p className="text-gray-600 mb-4">{facility.description}</p>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">{facility.name}</h3>
-                  <p className="text-gray-600 mb-4">{facility.description}</p>
-                  <div className="space-y-2">
+                  <div className="space-y-2 mt-auto">
                     {facility.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
                         <i className="fas fa-check text-green-500 text-sm"></i>
@@ -147,7 +154,7 @@ export default function Sports() {
         </div>
       </section>
 
-      {/* Sports Schedule */}
+      {/* Training Schedule */}
       <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 slide-up">
@@ -155,7 +162,7 @@ export default function Sports() {
               Training Schedule
             </h2>
             <p className="text-gray-600 text-lg">
-              Regular practice sessions for GCMS Ghallanai athletes
+              Structured practice sessions to enhance athletic skills and teamwork
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
@@ -171,7 +178,6 @@ export default function Sports() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200">
-                    {/* TODO: Update with actual schedule from GCMS Ghallanai */}
                     <tr>
                       <td className="px-6 py-4 text-gray-800">Monday</td>
                       <td className="px-6 py-4 text-gray-600">3:00 PM - 5:00 PM</td>
@@ -214,3 +220,4 @@ export default function Sports() {
     </div>
   );
 }
+

@@ -17,7 +17,7 @@ type Program = {
   title: string;
   description: string;
   available: boolean;
-  featured: boolean;
+  detailedDescription: string;
 };
 
 const programs: Program[] = [
@@ -27,8 +27,9 @@ const programs: Program[] = [
     title: "Faculty of Science in Computer Science",
     description:
       "Foundation in computer science with emphasis on programming fundamentals and mathematics.",
+    detailedDescription:
+      "This program provides students with a strong foundation in computer science, covering programming, data structures, and mathematics. Students engage in practical labs and projects to develop critical problem-solving skills and prepare for advanced computing studies or careers in technology.",
     available: true,
-    featured: false,
   },
   {
     code: "D.Com",
@@ -36,8 +37,9 @@ const programs: Program[] = [
     title: "Diploma in Commerce",
     description:
       "Comprehensive commercial education covering accounting, business studies, and economics.",
+    detailedDescription:
+      "The Diploma in Commerce offers a thorough understanding of accounting principles, business management, and economic theory. Students gain practical skills through case studies, projects, and internships, equipping them for careers in finance, accounting, and business operations.",
     available: true,
-    featured: false,
   },
   {
     code: "DIT",
@@ -45,8 +47,9 @@ const programs: Program[] = [
     title: "Diploma in Information Technology",
     description:
       "Practical IT skills training including computer applications and basic programming.",
+    detailedDescription:
+      "The Diploma in IT equips students with practical skills in software applications, networking, and programming fundamentals. Hands-on projects and workshops ensure students are ready to enter the IT industry with confidence and practical experience.",
     available: true,
-    featured: true,
   },
   {
     code: "BS CS",
@@ -54,8 +57,9 @@ const programs: Program[] = [
     title: "Bachelor of Science in CS",
     description:
       "Advanced computing degree with software development, algorithms, and system design.",
+    detailedDescription:
+      "The BS in Computer Science provides an in-depth study of software development, algorithms, database systems, and system design. Students complete challenging projects and research work to prepare for high-level careers in technology, software engineering, and research.",
     available: true,
-    featured: true,
   },
   {
     code: "BS Commerce",
@@ -63,8 +67,9 @@ const programs: Program[] = [
     title: "Bachelor of Science in Commerce",
     description:
       "Advanced business and commerce education with specializations in finance and management.",
+    detailedDescription:
+      "BS Commerce focuses on finance, management, and business strategy. Students explore accounting, economics, and entrepreneurship through case studies, internships, and group projects, preparing them for professional careers or further studies in business and commerce.",
     available: true,
-    featured: false,
   },
 ];
 
@@ -100,14 +105,7 @@ export default function AcademicPrograms() {
           {programs.map((program, index) => (
             <Card
               key={index}
-              className={`group relative border-0 rounded-2xl p-8 h-full flex flex-col hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2
-                ${
-                  program.available
-                    ? program.featured
-                      ? "bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-xl"
-                      : "bg-white shadow-md border border-slate-200 hover:border-blue-300"
-                    : "bg-slate-100 border border-slate-200"
-                }`}
+              className="group relative rounded-2xl p-8 h-full flex flex-col bg-white shadow-md border border-slate-200 hover:bg-blue-50 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
               data-testid={`card-program-${index}`}
             >
               {/* Coming Soon Badge */}
@@ -126,37 +124,25 @@ export default function AcademicPrograms() {
                   <div className="flex items-start justify-between mb-6">
                     <div className="flex-1">
                       <h3
-                        className={`text-2xl font-bold mb-2 ${
-                          program.featured ? "text-white" : "text-slate-800"
-                        }`}
+                        className="text-2xl font-bold mb-2 text-slate-800"
                         data-testid={`text-program-code-${index}`}
                       >
                         {program.code}
                       </h3>
-                      <h4
-                        className={`text-sm font-medium mb-4 ${
-                          program.featured ? "text-blue-100" : "text-slate-600"
-                        }`}
-                      >
+                      <h4 className="text-sm font-medium mb-4 text-slate-600">
                         {program.title}
                       </h4>
                     </div>
                     <Badge
                       variant="secondary"
-                      className={`ml-4 ${
-                        program.featured
-                          ? "bg-white/20 text-white border-white/30"
-                          : "bg-blue-50 text-blue-700 border-blue-200"
-                      }`}
+                      className="ml-4 bg-blue-50 text-blue-700 border-blue-200"
                       data-testid={`badge-program-duration-${index}`}
                     >
                       {program.duration}
                     </Badge>
                   </div>
                   <p
-                    className={`mb-6 leading-relaxed ${
-                      program.featured ? "text-blue-50" : "text-slate-600"
-                    }`}
+                    className="mb-6 leading-relaxed text-slate-600"
                     data-testid={`text-program-description-${index}`}
                   >
                     {program.description}
@@ -165,14 +151,11 @@ export default function AcademicPrograms() {
 
                 {/* Button at bottom */}
                 <Button
-                  className={`w-full py-4 rounded-xl font-semibold text-base transition-all duration-300 mt-auto
-                    ${
-                      program.available
-                        ? program.featured
-                          ? "bg-white text-blue-700 hover:bg-blue-50 shadow-lg hover:shadow-xl"
-                          : "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl"
-                        : "bg-slate-400 text-white cursor-not-allowed"
-                    }`}
+                  className={`w-full py-4 rounded-xl font-semibold text-base transition-all duration-300 mt-auto ${
+                    program.available
+                      ? "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl"
+                      : "bg-slate-400 text-white cursor-not-allowed"
+                  }`}
                   disabled={!program.available}
                   onClick={() => setSelectedProgram(program)}
                   data-testid={`button-program-learn-more-${index}`}
@@ -198,27 +181,12 @@ export default function AcademicPrograms() {
                   </DialogDescription>
                 </DialogHeader>
 
-                <div className="py-4 text-slate-700 text-sm sm:text-base leading-relaxed">
+                <div className="py-4 text-slate-700 text-sm sm:text-base leading-relaxed space-y-4">
                   <p>{selectedProgram.description}</p>
+                  <p>{selectedProgram.detailedDescription}</p>
                 </div>
 
-                <DialogFooter className="flex flex-col sm:flex-row gap-3 sm:gap-0 sm:justify-end">
-                  <Button
-                    className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 w-full sm:w-auto"
-                    onClick={() => {
-                      window.location.href = "/"; 
-                    }}
-                  >
-                    Apply Now
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="w-full sm:w-auto"
-                    onClick={() => setSelectedProgram(null)}
-                  >
-                    Close
-                  </Button>
-                </DialogFooter>
+                
               </>
             )}
           </DialogContent>
@@ -227,4 +195,8 @@ export default function AcademicPrograms() {
     </section>
   );
 }
+
+
+
+
 
