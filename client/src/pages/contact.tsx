@@ -20,6 +20,8 @@ export default function Contact() {
     message: "",
   });
 
+  const [successMessage, setSuccessMessage] = useState(""); // ✅ success message state
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -75,9 +77,13 @@ export default function Contact() {
     const hasErrors = Object.values(newErrors).some((err) => err !== "");
     if (hasErrors) return;
 
+    // Simulate sending form (since it's a static site)
     console.log("Form submitted:", formData);
-    alert("Thank you for your message! We will get back to you soon.");
 
+    // Show success message instead of alert
+    setSuccessMessage("Your message has been sent successfully!");
+
+    // Clear form fields
     setFormData({
       name: "",
       email: "",
@@ -85,6 +91,9 @@ export default function Contact() {
       subject: "",
       message: "",
     });
+
+    // Hide success message after 5 seconds
+    setTimeout(() => setSuccessMessage(""), 5000);
   };
 
   return (
@@ -291,6 +300,13 @@ export default function Contact() {
                   )}
                 </div>
 
+                {/* Success Message */}
+                {successMessage && (
+                  <div className="p-3 bg-green-100 border border-green-300 text-green-700 rounded-lg text-sm font-medium animate-fade-in">
+                    {successMessage}
+                  </div>
+                )}
+
                 <Button
                   type="submit"
                   className="w-full bg-primary hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors"
@@ -302,35 +318,30 @@ export default function Contact() {
             </div>
 
             {/* Map and Additional Info */}
-<div className="slide-up delay-400">
-  <h2 className="text-3xl font-bold text-gray-800 mb-6">Find Us</h2>
+            <div className="slide-up delay-400">
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">Find Us</h2>
+              <div className="rounded-lg overflow-hidden mb-6 shadow-lg">
+                <iframe
+                  title="GCMS Ghallanai Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3233.653361590094!2d71.39933441493311!3d34.32451492022922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d965295006e27f%3A0x486df9b0fd833fb!2sGCMS%20Ghallanai!5e0!3m2!1sen!2s!4v1696100000000!5m2!1sen!2s"
+                  width="100%"
+                  height="400"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                ></iframe>
+              </div>
 
-  {/* Google Maps Embed with Place Info */}
-  <div className="rounded-lg overflow-hidden mb-6 shadow-lg">
-    <iframe
-      title="GCMS Ghallanai Location"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3233.653361590094!2d71.39933441493311!3d34.32451492022922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d965295006e27f%3A0x486df9b0fd833fb!2sGCMS%20Ghallanai!5e0!3m2!1sen!2s!4v1696100000000!5m2!1sen!2s"
-      width="100%"
-      height="400"
-      style={{ border: 0 }}
-      allowFullScreen
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
-
-  {/* Get Directions Button */}
-  <a
-    href="https://www.google.com/maps/dir/?api=1&destination=GCMS+Ghallanai, Ghallanai, Khyber Pakhtunkhwa"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-block bg-primary hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-colors duration-300"
-  >
-    <i className="fas fa-location-arrow mr-2"></i>
-    Get Directions
-  </a>
-</div>
-
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=GCMS+Ghallanai, Ghallanai, Khyber Pakhtunkhwa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-primary hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-colors duration-300"
+              >
+                <i className="fas fa-location-arrow mr-2"></i>
+                Get Directions
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -339,3 +350,4 @@ export default function Contact() {
     </div>
   );
 }
+
