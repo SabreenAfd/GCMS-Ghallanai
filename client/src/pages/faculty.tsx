@@ -12,21 +12,21 @@ const departments = [
     head: "Muhammad Iqbal",
     description: "Leading experts in commerce and business studies",
     icon: "fas fa-chart-line",
-    color: "bg-gradient-to-br from-blue-500 to-blue-600"
+    color: "bg-primary "
   },
   {
     name: "Management Sciences",
     head: "Muhammad Farooq", 
     description: "Experienced faculty in management and administration",
     icon: "fas fa-users-cog",
-    color: "bg-gradient-to-br from-green-500 to-green-600"
+    color: "bg-primary "
   },
   {
     name: "English Department",
     head: "Fawad Ali Azeemi",
     description: "Literature experts and language specialists",
     icon: "fas fa-book-open",
-    color: "bg-gradient-to-br from-purple-500 to-purple-600"
+    color: "bg-primary "
   }
 ];
 
@@ -113,7 +113,7 @@ export default function Faculty() {
                       {member.department}
                     </p>
                     <p
-                      className="text-gray-600 text-sm mb-3 h-5 italic"
+                      className="text-gray-600 text-sm mb-3 h-5"
                       data-testid={`text-faculty-qualification-${member.id}`}
                     >
                       {member.qualification}

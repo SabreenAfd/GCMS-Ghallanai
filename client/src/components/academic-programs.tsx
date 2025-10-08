@@ -79,7 +79,7 @@ export default function AcademicPrograms() {
   return (
     <section
       id="programs"
-      className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50"
+      className="pt-12 pb-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50"
     >
       <div className="container mx-auto px-4">
         {/* Section Title */}
@@ -160,7 +160,7 @@ export default function AcademicPrograms() {
                   onClick={() => setSelectedProgram(program)}
                   data-testid={`button-program-learn-more-${index}`}
                 >
-                  {program.available ? "Learn More & Apply" : "Coming Soon"}
+                  {program.available ? "Learn More" : "Coming Soon"}
                 </Button>
               </CardContent>
             </Card>

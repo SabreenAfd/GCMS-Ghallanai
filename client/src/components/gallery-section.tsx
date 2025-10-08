@@ -30,7 +30,7 @@ export default function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section id="gallery" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <section id="gallery" className="pt-12 pb-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6" data-testid="text-gallery-title">
@@ -96,14 +96,7 @@ export default function GallerySection() {
                   className="w-full h-auto rounded-xl shadow-lg"
                   data-testid="img-lightbox"
                 />
-                <button
-                  onClick={() => setSelectedImage(null)}
-                  className="absolute top-4 right-4 bg-white/90 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-300 hover:scale-110"
-                >
-                  <svg className="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
+               
               </div>
             )}
           </DialogContent>

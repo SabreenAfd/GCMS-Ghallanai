@@ -12,8 +12,9 @@ import classImage from "@/assets/classroom.jpg";
 import event1Image from "@/assets/event1 (1).jpg";
 import event2Image from "@/assets/event1 (2).jpg";
 import event3Image from "@/assets/event1 (3).jpg";
-
+import footballImage from "@/assets/football-team.jpg";
 import annualFunctionVideo from "@/assets/annual-function.mp4";
+import cricketImage from "@/assets/cricket-team.jpg";
 
 const galleryCategories = [
   {
@@ -40,12 +41,12 @@ const galleryCategories = [
     title: "Sports Activities",
     images: [
       {
-        src: sportsImage,
+        src: footballImage,
         alt: "Hockey Team",
         description: "Hockey team in action during championship",
       },
       {
-        src: sportImage,
+        src: cricketImage,
         alt: "Cricket Match",
         description: "Cricket team during inter-school tournament",
       },
@@ -88,12 +89,12 @@ export default function Gallery() {
       <Header />
 
       {/* Page Header */}
-      <section className="text-white py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <section className="text-white pt-12 pb-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="container mx-auto px-4 text-center text-black">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 slide-up">
             Gallery
           </h1>
-          <p className="text-xl opacity-90 slide-up delay-200 ">
+          <p className="text-xl opacity-90 slide-up delay-200">
             Capturing memorable moments at GCMS Ghallanai
           </p>
         </div>
@@ -113,6 +114,8 @@ export default function Gallery() {
               </h2>
               <div className="w-24 h-1 bg-primary mx-auto"></div>
             </div>
+
+            {/* Image Grid */}
             <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {category.images.map((image, imageIndex) => (
                 <div
@@ -120,6 +123,7 @@ export default function Gallery() {
                   className={`group cursor-pointer slide-up delay-${
                     (imageIndex + 1) * 100
                   }`}
+                  onClick={() => window.open(image.src, "_blank")} // ✅ Opens full-size image
                 >
                   <div className="relative overflow-hidden rounded-xl shadow-lg">
                     <img
@@ -177,5 +181,6 @@ export default function Gallery() {
     </div>
   );
 }
+
 
 

@@ -7,16 +7,16 @@ import footballImage from "@/assets/football-team.jpg";
 import volleyballImage from "@/assets/volleyball-team.jpg";
 import cricketImage from "@/assets/cricket-team.jpg";
 import badmintonImage from "@/assets/badminton-team.jpg";
-import athleticsImage from "@/assets/athletics.jpg";
-import tableTennisImage from "@/assets/table-tennis.jpg";
+
 
 const allSports = [
   {
-    name: "Football",
-    description:
-      "At GCMS Ghallanai, the Football team has shown strong performance in regional tournaments, bringing honours in inter-college matches. The coaching is focused on both skill development and teamwork.",
-    image: footballImage,
-  },
+  name: "Hockey",
+  description:
+    "At GCMS Ghallanai, the Hockey team has shown strong performance in regional tournaments, bringing honours in inter-college matches. The coaching is focused on both skill development and teamwork.",
+  image: footballImage,
+},
+
   {
     name: "Volleyball",
     description:
@@ -35,18 +35,7 @@ const allSports = [
       "Indoor badminton is a growing sport at GCMS Ghallanai, encouraging agility, focus, and competitive spirit.",
     image: badmintonImage,
   },
-  {
-    name: "Athletics",
-    description:
-      "Athletics events such as running, jumping, and throwing nurture endurance, strength, and discipline among students.",
-    image: athleticsImage,
-  },
-  {
-    name: "Table Tennis",
-    description:
-      "Table tennis offers students a fast-paced indoor sport to improve reflexes, strategy, and focus.",
-    image: tableTennisImage,
-  },
+  
 ];
 
 export default function SportsSection({ expandable = false }) {
@@ -61,7 +50,7 @@ export default function SportsSection({ expandable = false }) {
   return (
     <section
       id="sports"
-      className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50"
+      className="pt-12 pb-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50"
     >
       <div className="container mx-auto px-4">
         {/* Title */}
