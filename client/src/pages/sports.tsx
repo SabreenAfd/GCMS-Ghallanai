@@ -147,7 +147,7 @@ export default function Sports() {
             <div className="bg-white rounded-xl shadow-2xl overflow-hidden slide-up delay-400">
               <div className="overflow-x-auto">
                 <table className="w-full">
-                  <thead className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+                  <thead className="bg-primary text-white">
                     <tr>
                       <th className="px-6 py-4 text-left font-semibold">Day</th>
                       <th className="px-6 py-4 text-left font-semibold">Time</th>

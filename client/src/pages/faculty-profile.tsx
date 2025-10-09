@@ -85,7 +85,7 @@ export default function FacultyProfile() {
                     className="relative w-64 h-64 rounded-3xl object-cover border-4 border-white/30 shadow-2xl backdrop-blur-sm"
                   />
                   {/* Experience Badge */}
-                  <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-4 py-2 rounded-2xl shadow-xl font-bold">
+                  <div className="absolute -bottom-4 -right-4 bg-primary text-white px-4 py-2 rounded-2xl shadow-xl font-bold">
                     {faculty.experience}
                   </div>
                 </div>
@@ -123,7 +123,7 @@ export default function FacultyProfile() {
             <div className="slide-up delay-600 mb-16">
               <Card className="shadow-xl border-0 hover:shadow-2xl transition-all duration-300 bg-white rounded-2xl overflow-hidden">
                 <CardContent className="p-0">
-                  <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-6">
+                  <div className="bg-primary px-8 py-6">
                     <div className="flex items-center">
                       <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mr-4">
                         <i className="fas fa-user text-white text-xl"></i>
@@ -147,7 +147,7 @@ export default function FacultyProfile() {
               <div className="slide-up delay-700">
                 <Card className="shadow-xl border-0 hover:shadow-2xl transition-all duration-300 bg-white rounded-2xl overflow-hidden">
                   <CardContent className="p-0">
-                    <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-6">
+                    <div className="bg-primary px-8 py-6">
                       <div className="flex items-center">
                         <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mr-4">
                           <i className="fas fa-graduation-cap text-white text-xl"></i>

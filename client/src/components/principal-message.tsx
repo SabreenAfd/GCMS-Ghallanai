@@ -27,7 +27,7 @@ export default function PrincipalMessage() {
               <div className="text-center sticky top-8">
                 <div className="mb-6 group">
                   <div className="relative inline-block">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-xl transform rotate-6 group-hover:rotate-12 transition-transform duration-500"></div>
+                    <div className="absolute inset-0 bg-blue-200  rounded-xl transform rotate-6 group-hover:rotate-12 transition-transform duration-500"></div>
                     <img
                       src={principalImg}
                       alt="Dr Mian Wajahat Hussain - Principal GCMS Ghallanai"
