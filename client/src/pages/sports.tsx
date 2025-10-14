@@ -3,9 +3,20 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import SportsSection from "@/components/sports-section";
 
+interface Achievement {
+  sport: string;
+  title: string;
+  description: string;
+}
+
+interface Facility {
+  name: string;
+  description: string;
+  features: string[];
+}
 
 // -------------------- Achievements --------------------
-const achievements = [
+const achievements: Achievement[] = [
   {
     sport: "Cricket",
     title: "District Champions",
@@ -27,7 +38,7 @@ const achievements = [
 ];
 
 // -------------------- Facilities --------------------
-const facilities = [
+const facilities: Facility[] = [
   {
     name: "Sports Ground",
     description: "Multipurpose ground used for cricket, football, and athletics.",
@@ -54,15 +65,13 @@ export default function Sports() {
     <div className="min-h-screen page-fade-in">
       <Header />
 
-     
-
-      {/* Sports Section */}
+      {/* Sports Section - Show all sports */}
       <div className="slide-up delay-400">
-        <SportsSection expandable />
+        <SportsSection showAll={true} />
       </div>
 
       {/* Achievements Section */}
-      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <section className="pt-12 pb-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 slide-up">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">

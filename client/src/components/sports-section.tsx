@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,15 +7,23 @@ import volleyballImage from "@/assets/volleyball-team.jpg";
 import cricketImage from "@/assets/cricket-team.jpg";
 import badmintonImage from "@/assets/badminton-team.jpg";
 
+interface Sport {
+  name: string;
+  description: string;
+  image: string;
+}
 
-const allSports = [
+interface SportsSectionProps {
+  showAll?: boolean;
+}
+
+const allSports: Sport[] = [
   {
-  name: "Hockey",
-  description:
-    "At GCMS Ghallanai, the Hockey team has shown strong performance in regional tournaments, bringing honours in inter-college matches. The coaching is focused on both skill development and teamwork.",
-  image: footballImage,
-},
-
+    name: "Hockey",
+    description:
+      "At GCMS Ghallanai, the Hockey team has shown strong performance in regional tournaments, bringing honours in inter-college matches. The coaching is focused on both skill development and teamwork.",
+    image: footballImage,
+  },
   {
     name: "Volleyball",
     description:
@@ -35,17 +42,10 @@ const allSports = [
       "Indoor badminton is a growing sport at GCMS Ghallanai, encouraging agility, focus, and competitive spirit.",
     image: badmintonImage,
   },
-  
 ];
 
-export default function SportsSection({ expandable = false }) {
-  const [showAll, setShowAll] = useState(false);
-
-  const sports = expandable
-    ? showAll
-      ? allSports
-      : allSports.slice(0, 2)
-    : allSports.slice(0, 2);
+export default function SportsSection({ showAll = false }: SportsSectionProps) {
+  const sports = showAll ? allSports : allSports.slice(0, 2);
 
   return (
     <section
@@ -92,23 +92,16 @@ export default function SportsSection({ expandable = false }) {
           ))}
         </div>
 
-        {/* Button */}
-        <div className="text-center">
-          {expandable ? (
-            <Button
-              onClick={() => setShowAll(!showAll)}
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            >
-              {showAll ? "Show Less" : "View All Sports"}
-            </Button>
-          ) : (
+        {/* Button - only show on home page */}
+        {!showAll && (
+          <div className="text-center">
             <Link href="/sports">
               <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                 View All Sports
               </Button>
             </Link>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </section>
   );
