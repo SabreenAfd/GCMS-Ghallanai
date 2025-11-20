@@ -15,7 +15,7 @@ const departments = [
     color: "bg-primary "
   },
   {
-    name: "Management Sciences",
+    name: "Computer Sciences",
     head: "Muhammad Farooq", 
     description: "Experienced faculty in management and administration",
     icon: "fas fa-users-cog",
@@ -148,7 +148,7 @@ export default function Faculty() {
     <div className="text-center mb-12 slide-up">
       <div className="inline-block">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-          Our Departments
+          Our Departmentsscsd
         </h2>
         <div className="w-20 h-1 bg-blue-600 mx-auto mb-4"></div>
       </div>
@@ -216,7 +216,7 @@ export default function Faculty() {
             </div>
           </div>
           <p className="text-white leading-relaxed">
-            Our faculty has published over <span className="font-bold">25 research papers</span> in national and international journals.
+            Our faculty has published more than <span className="font-bold">25 research papers</span> in national and international journals.
           </p>
         </div>
       </div>

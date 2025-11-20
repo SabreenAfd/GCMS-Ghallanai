@@ -74,7 +74,7 @@ export default function FacultySection() {
                     <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-indigo-600 transition-all duration-300">
                       {member.name}
                     </h3>
-                    <p className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 font-semibold text-base mb-2">
+                    <p className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 font-semibold text-base mb-2 ">
                       {member.position}
                     </p>
                     <p className="text-gray-600 text-sm font-medium mb-2">
