@@ -61,6 +61,7 @@ const programs: Program[] = [
       "The BS in Computer Science provides an in-depth study of software development, algorithms, database systems, and system design. Students complete challenging projects and research work to prepare for high-level careers in technology, software engineering, and research.",
     available: true,
   },
+   
   {
     code: "BS Commerce",
     duration: "4 Years",
