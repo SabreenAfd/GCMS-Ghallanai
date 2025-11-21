@@ -122,9 +122,9 @@ export default function Footer() {
                   <i className="fas fa-phone text-blue-400 group-hover:scale-110 transition-transform"></i>
                   <p className="text-gray-300" data-testid="text-contact-phone">0924-290310</p>
                 </div>
-                <div className="flex items-center space-x-3 group ml-8">
+                {/* <div className="flex items-center space-x-3 group ml-8">
                   <p className="text-gray-300" data-testid="text-contact-phone-2">0305-9280626</p>
-                </div>
+                </div> */}
               </div>
               <div className="flex items-start space-x-3 group">
                 <i className="fas fa-envelope text-blue-400 mt-1 shrink-0 group-hover:scale-110 transition-transform"></i>

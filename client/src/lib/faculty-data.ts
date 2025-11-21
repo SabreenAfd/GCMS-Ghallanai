@@ -8,6 +8,11 @@ import faculty7Image from "@/assets/faculty7.jpg";
 import faculty8Image from "@/assets/faculty8.jpg";
 import faculty9Image from "@/assets/faculty9.jpg";
 import faculty10Image from "@/assets/faculty10.jpg";
+import faculty11Image from "@/assets/faculty11.jpg";
+import faculty13Image from "@/assets/faculty13.jpg";
+import faculty14Image from "@/assets/faculty14.jpg";
+
+
 
 export interface FacultyMember {
   id: number;
@@ -123,7 +128,79 @@ export const facultyMembers: FacultyMember[] = [
     specialization: ["HR Management", "Organizational Studies"],
     education: ["MSC Computer Science"],
     bio: "Altaf Hussain is an Assistant Professor Sciences and serves as Co-ordinator of Computer Science . With 17 years of experience, he holds an MSc in Computer Science and specializes in Human Resource Management and Organizational Studies, focusing on mentoring students and fostering a dynamic learning environment."
-  }
+  },
+ {
+    id: 11,
+    name: "Israr Ahmad",
+    position: "Assistant Professor (BPS-18)",
+    qualification: "M.Com, MS (Management Sciences), DIT, B.Ed",
+    image: faculty11Image,
+    department: "Commerce / Management Sciences Department",
+    experience: "20 Years",
+    slug: "israr-ahmad",
+    profileUrl: "/faculty/israr-ahmad",
+    specialization: [
+        "HR Management",
+        "Organizational Studies",
+        "Higher Education Administration"
+    ],
+    education: [
+        "M.Com - University of Peshawar",
+        "MS in Management Sciences",
+        "DIT - KPK BT & CE Hayatabad Peshawar",
+        "B.Ed - AIOU Islamabad"
+    ],
+    bio: "Israr Ahmad is an Assistant Professor (BPS-18) with 20 years of teaching experience in the field of Commerce and Management Sciences. He holds an M.Com from Peshawar University, an MS in Management Sciences, a DIT from KPK BT & CE Hayatabad Peshawar, and a B.Ed from Allama Iqbal Open University Islamabad. Throughout his career, he has served in key academic and administrative roles, including Students Scholarships Incharge, Students Coordinator, and liaison with Peshawar University, BISE Peshawar, and BT & CE KPK. His areas of specialization include Human Resource Management and Organizational Studies. He is committed to promoting academic excellence and supporting student development through mentorship and leadership."
+},
+
+
+
+  {
+    id: 13,
+    name: "Zeenat Shah",
+    position: "Assistant Professor",
+    qualification: "Master in Commerce (Quaid-e-Azam College of Commerce, University of Peshawar)",
+    image: faculty13Image,
+    department: "Commerce Department",
+    experience: "16 Years",
+    slug: "zeenat-shah",
+    profileUrl: "/faculty/zeenat-shah",
+    specialization: [
+        "Higher Education Department KP",
+        "Organizational Studies"
+    ],
+    education: [
+        "Master in Commerce - Quaid-e-Azam College of Commerce, University of Peshawar"
+    ],
+    bio: "Zeenat Shah is an Assistant Professor at the Govt. College of Management Sciences Ghallanai, District Mohmand. With 16 years of teaching experience, she holds a Master in Commerce from Quaid-e-Azam College of Commerce, University of Peshawar. She has served in the Higher Education Department KP and specializes in Organizational Studies. She is committed to academic excellence, student guidance, and fostering a supportive learning environment."
+},
+
+
+{
+    id: 14,
+    name: "Naeem Nasir",
+    position: "Lecturer",
+    qualification: "M.A Urdu (Islamia University Peshawar), M.Phil (Qurtuba University Hayatabad Peshawar)",
+    image: faculty14Image,
+    department: "Urdu / Humanities Department",
+    experience: "7 Years",
+    slug: "naeem-nasir",
+    profileUrl: "/faculty/naeem-nasir",
+    specialization: [
+        "Urdu Literature",
+        "Higher Education Department KP"
+    ],
+    education: [
+        "M.A Urdu - Islamia University Peshawar",
+        "M.Phil - Qurtuba University Hayatabad Peshawar"
+    ],
+    bio: "Naeem Nasir is a Lecturer at the Govt. College of Management Sciences Ghallani, District Mohmand. He holds an M.A in Urdu from Islamia University Peshawar and an M.Phil from Qurtuba University Hayatabad Peshawar. With 7 years of experience in the Higher Education Department KP, he is known for his dedication to teaching, academic guidance, and promoting a productive learning environment for students."
+}
+
+
+
+
+  
 
 
 ];

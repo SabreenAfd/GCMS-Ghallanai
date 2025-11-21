@@ -101,19 +101,19 @@ export default function Faculty() {
                       {member.name}
                     </h3>
                     <p
-                      className="text-blue-600 font-semibold text-base mb-2 h-6"
+                      className="text-blue-600 font-semibold text-base mb-2 h-6 "
                       data-testid={`text-faculty-position-${member.id}`}
                     >
                       {member.position}
                     </p>
                     <p
-                      className="text-gray-500 text-sm font-medium mb-2 h-5"
+                      className="text-gray-500 text-sm font-medium mb-2 h-5 mt-[30px]"
                       data-testid={`text-faculty-department-${member.id}`}
                     >
                       {member.department}
                     </p>
                     <p
-                      className="text-gray-600 text-sm mb-3 h-5"
+                      className="text-gray-600 text-sm mb-3 h-5 "
                       data-testid={`text-faculty-qualification-${member.id}`}
                     >
                       {member.qualification}
