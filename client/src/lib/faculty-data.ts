@@ -57,7 +57,7 @@ export const facultyMembers: FacultyMember[] = [
     profileUrl: "/faculty/hidayat-ullah",
     specialization: ["Pure Mathematics"],
     education: ["PhD Mathematics - University of Peshawar"],
-    bio: "Dr. Hidayat Ullah is an Lecturer and Sport In-charge in the Mathematics Department. With a PhD in Mathematics from the University of Peshawar and 8 years of experience, he specializes in Pure Mathematics and is dedicated to mentoring students and advancing academic excellence. He have published "
+    bio: "Dr. Hidayat Ullah is a Lecturer and Controller of Examinations in the Mathematics Department. With a PhD in Mathematics and 8 years of experience, he specializes in Pure Mathematics, has 18 international research publications, and is committed to supporting students through high-quality teaching and academic guidance. "
   },
   {
     id: 3,
@@ -133,7 +133,7 @@ export const facultyMembers: FacultyMember[] = [
     id: 11,
     name: "Israr Ahmad",
     position: "Assistant Professor (BPS-18)",
-    qualification: "M.Com, MS (Management Sciences), DIT, B.Ed",
+    qualification: "M.Com/MS/DIT/B.Ed",
     image: faculty11Image,
     department: "Commerce / Management Sciences Department",
     experience: "20 Years",
@@ -159,7 +159,7 @@ export const facultyMembers: FacultyMember[] = [
     id: 13,
     name: "Zeenat Shah",
     position: "Assistant Professor",
-    qualification: "Master in Commerce (Quaid-e-Azam College of Commerce, University of Peshawar)",
+    qualification: "Master in Commerce",
     image: faculty13Image,
     department: "Commerce Department",
     experience: "16 Years",
@@ -170,9 +170,8 @@ export const facultyMembers: FacultyMember[] = [
         "Organizational Studies"
     ],
     education: [
-        "Master in Commerce - Quaid-e-Azam College of Commerce, University of Peshawar"
-    ],
-    bio: "Zeenat Shah is an Assistant Professor at the Govt. College of Management Sciences Ghallanai, District Mohmand. With 16 years of teaching experience, she holds a Master in Commerce from Quaid-e-Azam College of Commerce, University of Peshawar. She has served in the Higher Education Department KP and specializes in Organizational Studies. She is committed to academic excellence, student guidance, and fostering a supportive learning environment."
+        "Master in Commerce - Quaid-e-Azam College of Commerce, University of Peshawar"],
+    bio: "Zeenat Shah is an Assistant Professor at the Govt. College of Management Sciences Ghallanai, District Mohmand. With 16 years of teaching experience, he holds a Master in Commerce from Quaid-e-Azam College of Commerce, University of Peshawar. He has served in the Higher Education Department KP and specializes in Organizational Studies. He is committed to academic excellence, student guidance, and fostering a supportive learning environment."
 },
 
 
@@ -180,7 +179,7 @@ export const facultyMembers: FacultyMember[] = [
     id: 14,
     name: "Naeem Nasir",
     position: "Lecturer",
-    qualification: "M.A Urdu (Islamia University Peshawar), M.Phil (Qurtuba University Hayatabad Peshawar)",
+    qualification: "M.A/M.Phil Urdu",
     image: faculty14Image,
     department: "Urdu / Humanities Department",
     experience: "7 Years",
@@ -194,7 +193,7 @@ export const facultyMembers: FacultyMember[] = [
         "M.A Urdu - Islamia University Peshawar",
         "M.Phil - Qurtuba University Hayatabad Peshawar"
     ],
-    bio: "Naeem Nasir is a Lecturer at the Govt. College of Management Sciences Ghallani, District Mohmand. He holds an M.A in Urdu from Islamia University Peshawar and an M.Phil from Qurtuba University Hayatabad Peshawar. With 7 years of experience in the Higher Education Department KP, he is known for his dedication to teaching, academic guidance, and promoting a productive learning environment for students."
+    bio: "Naeem Nasir is a Lecturer at the Govt. College of Management Sciences Ghallani, District Mohmand. He holds an M.A. in Urdu from Islamia University Peshawar and an M.Phil from Qurtuba University, Hayatabad, Peshawar. With 7 years of experience in the Higher Education Department KP, he is known for his dedication to teaching, academic guidance, and promoting a productive learning environment for students."
 }
 
 
