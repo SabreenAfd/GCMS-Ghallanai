@@ -11,6 +11,7 @@ import faculty10Image from "@/assets/faculty10.jpg";
 import faculty11Image from "@/assets/faculty11.jpg";
 import faculty13Image from "@/assets/faculty13.jpg";
 import faculty14Image from "@/assets/faculty14.jpg";
+import faculty15Image from "@/assets/faculty15.jpg";
 
 
 
@@ -194,12 +195,36 @@ export const facultyMembers: FacultyMember[] = [
         "M.Phil - Qurtuba University Hayatabad Peshawar"
     ],
     bio: "Naeem Nasir is a Lecturer at the Govt. College of Management Sciences Ghallani, District Mohmand. He holds an M.A. in Urdu from Islamia University Peshawar and an M.Phil from Qurtuba University, Hayatabad, Peshawar. With 7 years of experience in the Higher Education Department KP, he is known for his dedication to teaching, academic guidance, and promoting a productive learning environment for students."
-}
+},
+
+
+{
+    id: 15,
+    name: "Mustafa",
+    position: "Lecturer",
+    qualification: "M.Phil / MSc / M.Ed / B.Ed / DIT",
+    image: faculty15Image,
+    department: "Statistics Department (BPS-17)",
+    experience: "2 Years",
+    slug: "mustafa",
+    profileUrl: "/faculty/mustafa",
+    specialization: [
+        "Statistics",
+        "Higher Education"
+    ],
+    education: [
+        "M.Phil - National College Of Business Administration & Economics (NCBA&E), Lahore",
+        "MSc in Statistics - Department of Statistics, University of Peshawar",
+        "M.Ed - University of Peshawar",
+        "B.Ed - Allama Iqbal Open University, Islamabad (AIOU)",
+        "DIT - KPK TTB, Gulbahar"
+    ],
+    bio: "Mustafa is a Lecturer in the Statistics Department at the Govt. College of Management Sciences Ghallanai, District Mohmand. He holds an M.Phil from the National College of Business Administration & Economics (NCBA&E), Lahore, an MSc in Statistics from the Department of Statistics, University of Peshawar, an M.Ed from the University of Peshawar, a B.Ed from Allama Iqbal Open University, Islamabad (AIOU), and a DIT from KPK TTB, Gulbahar. With 2 years of teaching experience, he is committed to academic excellence, student guidance, and fostering a supportive learning environment."
+
+},
 
 
 
-
-  
 
 
 ];

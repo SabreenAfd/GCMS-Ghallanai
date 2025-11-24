@@ -23,7 +23,7 @@ const departments = [
   },
   {
     name: "English Department",
-    head: "Fawad Ali Azeemi",
+    head: "Shahab Uddin",
     description: "Literature experts and language specialists",
     icon: "fas fa-book-open",
     color: "bg-primary "
