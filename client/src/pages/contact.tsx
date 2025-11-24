@@ -45,11 +45,11 @@ export default function Contact() {
                 <i className="fas fa-phone text-white text-2xl"></i>
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                Phone Number
+                Contact Number
               </h3>
               <p className="text-gray-600">
-                <a href="tel:03059280626" className="hover:underline">
-                  0305-9280626
+                <a href="tel:0924290310" className="hover:underline">
+                  0924-290310
                 </a>
               </p>
             </div>

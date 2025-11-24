@@ -123,7 +123,8 @@ export default function Gallery() {
                   className={`group cursor-pointer slide-up delay-${
                     (imageIndex + 1) * 100
                   }`}
-                  onClick={() => window.open(image.src, "_blank")} // ✅ Opens full-size image
+                  onClick={() => window.location.href = image.src}
+
                 >
                   <div className="relative overflow-hidden rounded-xl shadow-lg">
                     <img
