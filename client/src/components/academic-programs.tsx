@@ -79,7 +79,7 @@ const programs: Program[] = [
     description:
       "Advanced education in graphic design with specializations in visual communication and creative design.",
     detailedDescription:
-      "BS Graphic Design focuses on visual communication, creative design, and digital media. Students explore branding, typography, illustration, and user-centered design through studio work, real-world projects, internships, and collaborative assignments, preparing them for professional careers or further studies in the field of graphic design.",
+      "Graphic Design focuses on visual communication, creative design, and digital media. Students explore branding, typography, illustration, and user-centered design through studio work, real-world projects, internships, and collaborative assignments, preparing them for professional careers or further studies in the field of graphic design.",
     available: true,
   },
    {
@@ -89,7 +89,7 @@ const programs: Program[] = [
     description:
       "Advanced education in e-commerce with specializations in online business management and digital marketing.",
     detailedDescription:
-      "BS Commerce focuses on finance, management, and business strategy. Students explore accounting, economics, and entrepreneurship through case studies, internships, and group projects, preparing them for professional careers or further studies in business and commerce.",
+      "E-Commerce focuses on finance, management, and business strategy. Students explore accounting, economics, and entrepreneurship through case studies, internships, and group projects, preparing them for professional careers or further studies in business and commerce.",
     available: true,
   },
    {
@@ -99,7 +99,7 @@ const programs: Program[] = [
     description:
       "Advanced education in web development with specializations in front-end technologies and full-stack application development.",
     detailedDescription:
-      "BS Web Development focuses on front-end and back-end programming, software engineering, and modern web technologies. Students learn HTML, CSS, JavaScript, frameworks, databases, and server-side development through practical projects, internships, and collaborative assignments, preparing them for professional careers or further studies in the field of web development.",
+      "Web Development focuses on front-end and back-end programming, software engineering, and modern web technologies. Students learn HTML, CSS, JavaScript, frameworks, databases, and server-side development through practical projects, internships, and collaborative assignments, preparing them for professional careers or further studies in the field of web development.",
     available: true,
   },
 ];
