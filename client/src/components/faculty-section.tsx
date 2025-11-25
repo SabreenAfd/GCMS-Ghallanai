@@ -51,8 +51,14 @@ export default function FacultySection() {
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
+
+
                     {/* Animated Corner Accent */}
-                    <div className="absolute top-0 left-0 w-0 h-0 border-l-[60px] border-l-transparent border-t-[60px] border-t-blue-500 opacity-30"></div>
+                    {/* <div className="absolute top-0 left-0 w-0 h-0 border-l-[60px] border-l-transparent border-t-[60px] border-t-blue-500 opacity-30"></div> */}
+
+
+
+
 
                     {/* Experience Badge */}
                     <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg backdrop-blur-sm transform group-hover:scale-110 transition-transform duration-300">
