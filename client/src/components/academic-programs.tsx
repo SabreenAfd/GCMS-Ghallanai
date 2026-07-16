@@ -61,7 +61,7 @@ const programs: Program[] = [
       "The BS in Computer Science provides an in-depth study of software development, algorithms, database systems, and system design. Students complete challenging projects and research work to prepare for high-level careers in technology, software engineering, and research.",
     available: true,
   },
-   
+
   {
     code: "BS Commerce",
     duration: "4 Years",
@@ -72,7 +72,7 @@ const programs: Program[] = [
       "BS Commerce focuses on finance, management, and business strategy. Students explore accounting, economics, and entrepreneurship through case studies, internships, and group projects, preparing them for professional careers or further studies in business and commerce.",
     available: true,
   },
-   {
+  {
     code: "Graphic Design",
     duration: "6 months",
     title: "Short Course Under ST & IT",
@@ -82,7 +82,7 @@ const programs: Program[] = [
       "Graphic Design focuses on visual communication, creative design, and digital media. Students explore branding, typography, illustration, and user-centered design through studio work, real-world projects, internships, and collaborative assignments, preparing them for professional careers or further studies in the field of graphic design.",
     available: true,
   },
-   {
+  {
     code: "E-Commerce",
     duration: "6 months",
     title: "Short Course Under ST & IT",
@@ -92,7 +92,7 @@ const programs: Program[] = [
       "E-Commerce focuses on finance, management, and business strategy. Students explore accounting, economics, and entrepreneurship through case studies, internships, and group projects, preparing them for professional careers or further studies in business and commerce.",
     available: true,
   },
-   {
+  {
     code: "Web Development",
     duration: "6 months",
     title: "Short Course Under ST & IT",
@@ -182,11 +182,10 @@ export default function AcademicPrograms() {
 
                 {/* Button at bottom */}
                 <Button
-                  className={`w-full py-4 rounded-xl font-semibold text-base transition-all duration-300 mt-auto ${
-                    program.available
+                  className={`w-full py-4 rounded-xl font-semibold text-base transition-all duration-300 mt-auto ${program.available
                       ? "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl"
                       : "bg-slate-400 text-white cursor-not-allowed"
-                  }`}
+                    }`}
                   disabled={!program.available}
                   onClick={() => setSelectedProgram(program)}
                   data-testid={`button-program-learn-more-${index}`}
@@ -217,7 +216,7 @@ export default function AcademicPrograms() {
                   <p>{selectedProgram.detailedDescription}</p>
                 </div>
 
-                
+
               </>
             )}
           </DialogContent>

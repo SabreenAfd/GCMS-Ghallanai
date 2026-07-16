@@ -12,9 +12,9 @@ import classImage from "@/assets/classroom.jpg";
 import event1Image from "@/assets/event1 (1).jpg";
 import event2Image from "@/assets/event1 (2).jpg";
 import event3Image from "@/assets/event1 (3).jpg";
-import footballImage from "@/assets/football-team.jpg";
+// import footballImage from "@/assets/football-team.jpg";
 import annualFunctionVideo from "@/assets/annual-function.mp4";
-import cricketImage from "@/assets/cricket-team.jpg";
+// import cricketImage from "@/assets/cricket-team.jpg";
 
 const galleryCategories = [
   {
@@ -41,17 +41,17 @@ const galleryCategories = [
     title: "Sports Activities",
     images: [
       {
-        src: footballImage,
+        src: "",
         alt: "Hockey Team",
         description: "Hockey team in action during championship",
       },
       {
-        src: cricketImage,
+        src: "",
         alt: "Cricket Match",
         description: "Cricket team during inter-school tournament",
       },
       {
-        src: teamImage,
+        src: "",
         alt: "Inter-college Sports",
         description: "Energetic moments from inter-college sports competition",
       },
@@ -105,9 +105,8 @@ export default function Gallery() {
         {galleryCategories.map((category, categoryIndex) => (
           <div key={categoryIndex} className="mb-16">
             <div
-              className={`text-center mb-8 slide-up delay-${
-                categoryIndex * 200
-              }`}
+              className={`text-center mb-8 slide-up delay-${categoryIndex * 200
+                }`}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 {category.title}
@@ -120,9 +119,8 @@ export default function Gallery() {
               {category.images.map((image, imageIndex) => (
                 <div
                   key={imageIndex}
-                  className={`group cursor-pointer slide-up delay-${
-                    (imageIndex + 1) * 100
-                  }`}
+                  className={`group cursor-pointer slide-up delay-${(imageIndex + 1) * 100
+                    }`}
                   onClick={() => window.location.href = image.src}
 
                 >

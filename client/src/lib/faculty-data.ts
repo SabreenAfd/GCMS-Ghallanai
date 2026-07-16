@@ -31,25 +31,25 @@ export interface FacultyMember {
 }
 
 export const facultyMembers: FacultyMember[] = [
- 
+
   {
     id: 1,
-    name: "Muhammad Iqbal",
-    position: "Associate Professor, Coordinator",
-    qualification: "MS in Finance & Accounting",
-    image: fawadAliImage,
-    department: "Commerce Department",
-    experience: "11 Years",
-    slug: "muhammad-iqbal",
-    profileUrl: "/faculty/muhammad-iqbal",
-    specialization: ["Commerce", "Business Studies", "Accounting"],
-    education: ["MS in Finance & Accounting -  NUML University"],
-    bio: "Muhammad Iqbal is an Associate Professor and Coordinator in the Commerce Department with over 11 years of teaching and research experience. He holds an MS in Finance & Accounting from NUML University and specializes in Commerce, Business Studies, and Accounting, fostering academic excellence and student development."
+    name: "Saz Wali Khan",
+    position: "Assistant Professor",
+    qualification: "Master in Commerce",
+    image: faculty5Image,
+    department: "Coordinator BS (Computer Science)",
+    experience: "18 Years",
+    slug: "saz-wali-khan",
+    profileUrl: "/faculty/saz-wali-khan",
+    specialization: ["Accounting", "Finance", "Business Management"],
+    education: ["Master in Commerce"],
+    bio: "Saz Wali Khan serves as an Assistant Professor in the Commerce Department with 18 years of teaching experience. Holding a Master in Commerce, he specializes in Accounting, Finance, and Business Management, focusing on developing students’ professional skills and analytical thinking."
   },
   {
     id: 2,
     name: "Dr.Hidayat Ullah",
-    position:  " Lecture/Controllor of Examinations/Cordinator FSc CS",
+    position: " Lecture/Controllor of Examinations/Cordinator FSc CS",
     qualification: "PhD Mathematics",
     image: abdulKabirImage,
     department: "Mathematics Department",
@@ -63,7 +63,7 @@ export const facultyMembers: FacultyMember[] = [
   {
     id: 3,
     name: "Muhammad Farooq",
-    position: "Lecturer /Incharge - Biometric & MIS ",
+    position: "Lecturer /Incharge - Biometric & MIS , Coordinator (BS Commerce)",
     qualification: "MS Management Sciences",
     image: najeebUllahImage,
     department: "Management Sciences",
@@ -90,17 +90,17 @@ export const facultyMembers: FacultyMember[] = [
   },
   {
     id: 6,
-    name: "Saz Wali Khan",
+    name: "Muhammad Iqbal",
     position: "Assistant Professor",
-    qualification: "Master in Commerce",
-    image: faculty5Image,
+    qualification: "MS in Finance & Accounting",
+    image: fawadAliImage,
     department: "Commerce Department",
-    experience: "18 Years",
-    slug: "saz-wali-khan",
-    profileUrl: "/faculty/saz-wali-khan",
-    specialization: ["Accounting", "Finance", "Business Management"],
-    education: ["Master in Commerce"],
-    bio: "Saz Wali Khan serves as an Assistant Professor in the Commerce Department with 18 years of teaching experience. Holding a Master in Commerce, he specializes in Accounting, Finance, and Business Management, focusing on developing students’ professional skills and analytical thinking."
+    experience: "11 Years",
+    slug: "muhammad-iqbal",
+    profileUrl: "/faculty/muhammad-iqbal",
+    specialization: ["Commerce", "Business Studies", "Accounting"],
+    education: ["MS in Finance & Accounting -  NUML University"],
+    bio: "Muhammad Iqbal is an Assistant Professor  in the Commerce Department with over 11 years of teaching and research experience. He holds an MS in Finance & Accounting from NUML University and specializes in Commerce, Business Studies, and Accounting, fostering academic excellence and student development."
   },
   {
     id: 8,
@@ -122,7 +122,7 @@ export const facultyMembers: FacultyMember[] = [
     position: "Assistant Professor",
     qualification: "Master of Computer Science",
     image: faculty10Image,
-    department: "Management Sciences",
+    department: "",
     experience: "17 Years",
     slug: "altaf-hussain",
     profileUrl: "/faculty/altaf-hussain",
@@ -130,7 +130,7 @@ export const facultyMembers: FacultyMember[] = [
     education: ["MSC Computer Science"],
     bio: "Altaf Hussain is an Assistant Professor Sciences and serves as Co-ordinator of Computer Science . With 17 years of experience, he holds an MSc in Computer Science and specializes in Human Resource Management and Organizational Studies, focusing on mentoring students and fostering a dynamic learning environment."
   },
- {
+  {
     id: 11,
     name: "Israr Ahmad",
     position: "Assistant Professor (BPS-18)",
@@ -141,18 +141,18 @@ export const facultyMembers: FacultyMember[] = [
     slug: "israr-ahmad",
     profileUrl: "/faculty/israr-ahmad",
     specialization: [
-        "HR Management",
-        "Organizational Studies",
-        "Higher Education Administration"
+      "HR Management",
+      "Organizational Studies",
+      "Higher Education Administration"
     ],
     education: [
-        "M.Com - University of Peshawar",
-        "MS in Management Sciences",
-        "DIT - KPK BT & CE Hayatabad Peshawar",
-        "B.Ed - AIOU Islamabad"
+      "M.Com - University of Peshawar",
+      "MS in Management Sciences",
+      "DIT - KPK BT & CE Hayatabad Peshawar",
+      "B.Ed - AIOU Islamabad"
     ],
     bio: "Israr Ahmad is an Assistant Professor (BPS-18) with 20 years of teaching experience in the field of Commerce and Management Sciences. He holds an M.Com from Peshawar University, an MS in Management Sciences, a DIT from KPK BT & CE Hayatabad Peshawar, and a B.Ed from Allama Iqbal Open University Islamabad. Throughout his career, he has served in key academic and administrative roles, including Students Scholarships Incharge, Students Coordinator, and liaison with Peshawar University, BISE Peshawar, and BT & CE KPK. His areas of specialization include Human Resource Management and Organizational Studies. He is committed to promoting academic excellence and supporting student development through mentorship and leadership."
-},
+  },
 
 
 
@@ -167,16 +167,16 @@ export const facultyMembers: FacultyMember[] = [
     slug: "zeenat-shah",
     profileUrl: "/faculty/zeenat-shah",
     specialization: [
-        "Higher Education Department KP",
-        "Organizational Studies"
+      "Higher Education Department KP",
+      "Organizational Studies"
     ],
     education: [
-        "Master in Commerce - Quaid-e-Azam College of Commerce, University of Peshawar"],
+      "Master in Commerce - Quaid-e-Azam College of Commerce, University of Peshawar"],
     bio: "Zeenat Shah is an Assistant Professor at the Govt. College of Management Sciences Ghallanai, District Mohmand. With 16 years of teaching experience, he holds a Master in Commerce from Quaid-e-Azam College of Commerce, University of Peshawar. He has served in the Higher Education Department KP and specializes in Organizational Studies. He is committed to academic excellence, student guidance, and fostering a supportive learning environment."
-},
+  },
 
 
-{
+  {
     id: 14,
     name: "Naeem Nasir",
     position: "Lecturer",
@@ -187,18 +187,18 @@ export const facultyMembers: FacultyMember[] = [
     slug: "naeem-nasir",
     profileUrl: "/faculty/naeem-nasir",
     specialization: [
-        "Urdu Literature",
-        "Higher Education Department KP"
+      "Urdu Literature",
+      "Higher Education Department KP"
     ],
     education: [
-        "M.A Urdu - Islamia University Peshawar",
-        "M.Phil - Qurtuba University Hayatabad Peshawar"
+      "M.A Urdu - Islamia University Peshawar",
+      "M.Phil - Qurtuba University Hayatabad Peshawar"
     ],
     bio: "Naeem Nasir is a Lecturer at the Govt. College of Management Sciences Ghallani, District Mohmand. He holds an M.A. in Urdu from Islamia University Peshawar and an M.Phil from Qurtuba University, Hayatabad, Peshawar. With 7 years of experience in the Higher Education Department KP, he is known for his dedication to teaching, academic guidance, and promoting a productive learning environment for students."
-},
+  },
 
 
-{
+  {
     id: 15,
     name: "Mustafa",
     position: "Lecturer",
@@ -209,19 +209,19 @@ export const facultyMembers: FacultyMember[] = [
     slug: "mustafa",
     profileUrl: "/faculty/mustafa",
     specialization: [
-        "Statistics",
-        "Higher Education"
+      "Statistics",
+      "Higher Education"
     ],
     education: [
-        "M.Phil - National College Of Business Administration & Economics (NCBA&E), Lahore",
-        "MSc in Statistics - Department of Statistics, University of Peshawar",
-        "M.Ed - University of Peshawar",
-        "B.Ed - Allama Iqbal Open University, Islamabad (AIOU)",
-        "DIT - KPK TTB, Gulbahar"
+      "M.Phil - National College Of Business Administration & Economics (NCBA&E), Lahore",
+      "MSc in Statistics - Department of Statistics, University of Peshawar",
+      "M.Ed - University of Peshawar",
+      "B.Ed - Allama Iqbal Open University, Islamabad (AIOU)",
+      "DIT - KPK TTB, Gulbahar"
     ],
     bio: "Mustafa is a Lecturer in the Statistics Department at the Govt. College of Management Sciences Ghallanai, District Mohmand. He holds an M.Phil from the National College of Business Administration & Economics (NCBA&E), Lahore, an MSc in Statistics from the Department of Statistics, University of Peshawar, an M.Ed from the University of Peshawar, a B.Ed from Allama Iqbal Open University, Islamabad (AIOU), and a DIT from KPK TTB, Gulbahar. With 2 years of teaching experience, he is committed to academic excellence, student guidance, and fostering a supportive learning environment."
 
-},
+  },
 
 
 

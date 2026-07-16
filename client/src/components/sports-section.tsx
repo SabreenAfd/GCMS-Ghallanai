@@ -2,10 +2,10 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-import footballImage from "@/assets/football-team.jpg";
-import volleyballImage from "@/assets/volleyball-team.jpg";
-import cricketImage from "@/assets/cricket-team.jpg";
-import badmintonImage from "@/assets/badminton-team.jpg";
+// import footballImage from "@/assets/football-team.jpg";                    
+// import volleyballImage from "@/assets/volleyball-team.jpg";
+// import cricketImage from "@/assets/cricket-team.jpg";
+// import badmintonImage from "@/assets/badminton-team.jpg";
 
 interface Sport {
   name: string;
@@ -22,25 +22,25 @@ const allSports: Sport[] = [
     name: "Hockey",
     description:
       "At GCMS Ghallanai, the Hockey team has shown strong performance in regional tournaments, bringing honours in inter-college matches. The coaching is focused on both skill development and teamwork.",
-    image: footballImage,
+    image: "",
   },
   {
     name: "Volleyball",
     description:
       "Volleyball is one of the most popular sports among students here. GCMS Ghallanai has participated in several district level volleyball tournaments, often finishing among the top teams.",
-    image: volleyballImage,
+    image: "",
   },
   {
     name: "Cricket",
     description:
       "The cricket team is one of the strongest at GCMS Ghallanai, frequently winning district tournaments and producing outstanding players.",
-    image: cricketImage,
+    image: "",
   },
   {
     name: "Badminton",
     description:
       "Indoor badminton is a growing sport at GCMS Ghallanai, encouraging agility, focus, and competitive spirit.",
-    image: badmintonImage,
+    image: "",
   },
 ];
 
