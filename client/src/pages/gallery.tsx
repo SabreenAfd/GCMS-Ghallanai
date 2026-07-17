@@ -14,7 +14,7 @@ import event2Image from "@/assets/event1 (2).jpg";
 import event3Image from "@/assets/event1 (3).jpg";
 // import footballImage from "@/assets/football-team.jpg";
 import annualFunctionVideo from "@/assets/annual-function.mp4";
-// import cricketImage from "@/assets/cricket-team.jpg";
+import cricket from "@/assets/GCMScricket.jpeg"
 
 const galleryCategories = [
   {
@@ -46,7 +46,7 @@ const galleryCategories = [
         description: "Hockey team in action during championship",
       },
       {
-        src: "",
+        src: cricket,
         alt: "Cricket Match",
         description: "Cricket team during inter-school tournament",
       },

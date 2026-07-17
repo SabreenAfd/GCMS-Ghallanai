@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 // import footballImage from "@/assets/football-team.jpg";                    
-// import volleyballImage from "@/assets/volleyball-team.jpg";
-// import cricketImage from "@/assets/cricket-team.jpg";
+import volleyball from "@/assets/Footbal.jpeg";
+import cricketImage from "@/assets/GCMScricket.jpeg";
 // import badmintonImage from "@/assets/badminton-team.jpg";
 
 interface Sport {
@@ -28,13 +28,13 @@ const allSports: Sport[] = [
     name: "Volleyball",
     description:
       "Volleyball is one of the most popular sports among students here. GCMS Ghallanai has participated in several district level volleyball tournaments, often finishing among the top teams.",
-    image: "",
+    image: volleyball,
   },
   {
     name: "Cricket",
     description:
       "The cricket team is one of the strongest at GCMS Ghallanai, frequently winning district tournaments and producing outstanding players.",
-    image: "",
+    image: cricketImage,
   },
   {
     name: "Badminton",
