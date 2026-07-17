@@ -19,12 +19,6 @@ interface SportsSectionProps {
 
 const allSports: Sport[] = [
   {
-    name: "Hockey",
-    description:
-      "At GCMS Ghallanai, the Hockey team has shown strong performance in regional tournaments, bringing honours in inter-college matches. The coaching is focused on both skill development and teamwork.",
-    image: "",
-  },
-  {
     name: "Volleyball",
     description:
       "Volleyball is one of the most popular sports among students here. GCMS Ghallanai has participated in several district level volleyball tournaments, often finishing among the top teams.",
@@ -36,12 +30,7 @@ const allSports: Sport[] = [
       "The cricket team is one of the strongest at GCMS Ghallanai, frequently winning district tournaments and producing outstanding players.",
     image: cricketImage,
   },
-  {
-    name: "Badminton",
-    description:
-      "Indoor badminton is a growing sport at GCMS Ghallanai, encouraging agility, focus, and competitive spirit.",
-    image: "",
-  },
+
 ];
 
 export default function SportsSection({ showAll = false }: SportsSectionProps) {

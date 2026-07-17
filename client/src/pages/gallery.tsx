@@ -151,11 +151,11 @@ export default function Gallery() {
             </div>
 
             {/* Image Grid */}
-            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
               {category.images.map((image, imageIndex) => (
                 <div
                   key={imageIndex}
-                  className={`group cursor-pointer slide-up delay-${(imageIndex + 1) * 100
+                  className={`w-full md:w-[calc(33.333%-1rem)] group cursor-pointer slide-up delay-${(imageIndex + 1) * 100
                     }`}
                   onClick={() => window.location.href = image.src}
 
