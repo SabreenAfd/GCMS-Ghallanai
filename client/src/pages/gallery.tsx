@@ -15,6 +15,15 @@ import event3Image from "@/assets/event1 (3).jpg";
 // import footballImage from "@/assets/football-team.jpg";
 import annualFunctionVideo from "@/assets/annual-function.mp4";
 import cricket from "@/assets/GCMScricket.jpeg"
+import Vollyball from "@/assets/Footbal.jpeg"
+import Event1 from "@/assets/Event1.jpeg";
+import Event3 from "@/assets/event3.jpeg";
+import Event4 from "@/assets/event4.jpeg";
+
+import tour1 from "@/assets/Tour1.jpeg";
+import tour2 from "@/assets/Tour2.jpeg";
+import tour3 from "@/assets/Tour3.jpeg";
+
 
 const galleryCategories = [
   {
@@ -35,26 +44,41 @@ const galleryCategories = [
         alt: "Academic Conference",
         description: "Faculty and students at academic conference",
       },
+      {
+        src: Event1,
+        alt: "Academic Conference",
+        description: "Faculty and students at academic conference",
+      },
+      {
+        src: Event3,
+        alt: "Graduation Ceremony",
+        description: "Graduates celebrating their achievements",
+      },
+      {
+        src: Event4,
+        alt: "Graduation Ceremony",
+        description: "Graduates celebrating their achievements",
+      },
     ],
   },
   {
     title: "Sports Activities",
     images: [
-      {
-        src: "",
-        alt: "Hockey Team",
-        description: "Hockey team in action during championship",
-      },
+      // {
+      //   src: "",
+      //   alt: "Hockey Team",
+      //   description: "Hockey team in action during championship",
+      // },
       {
         src: cricket,
         alt: "Cricket Match",
         description: "Cricket team during inter-school tournament",
       },
-      {
-        src: "",
-        alt: "Inter-college Sports",
-        description: "Energetic moments from inter-college sports competition",
-      },
+      // {
+      //   src: "",
+      //   alt: "Inter-college Sports",
+      //   description: "Energetic moments from inter-college sports competition",
+      // },
     ],
   },
   {
@@ -74,6 +98,18 @@ const galleryCategories = [
         src: classImage,
         alt: "Classroom",
         description: "Modern classroom facilities",
+      },
+
+
+      {
+        src: tour1,
+        alt: "Campus Tour",
+        description: "Our Campus Tour",
+      },
+      {
+        src: tour2,
+        alt: "Campus Tour",
+        description: "Our Campus Tour",
       },
     ],
   },
